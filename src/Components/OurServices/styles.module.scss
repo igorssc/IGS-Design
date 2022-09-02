@@ -14,12 +14,17 @@
     > div {
       display: grid;
       gap: 70px;
-      align-items: flex-start;
-      justify-content: space-between;
+      align-items: baseline;
 
       // md
       @media (min-width: 768px) {
         grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      // lg
+      @media (min-width: 1024px) {
+        gap: 70px;
       }
 
       div {

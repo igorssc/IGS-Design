@@ -23,7 +23,9 @@ export const Gallery = ({ items }: GaleryProps) => {
             key={key}
           >
             {({ ref, open }) => (
+              // eslint-disable-next-line @next/next/no-img-element
               <img
+                alt="portfolio"
                 ref={ref as LegacyRef<HTMLImageElement> | undefined}
                 onClick={open}
                 src={item.thumbnail}

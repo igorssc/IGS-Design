@@ -1,8 +1,15 @@
+.container {
+  display: block;
+  width: 100%;
+}
+
 .button {
   border: 1px solid #fff;
   background: transparent;
   color: #fff;
-  padding: 20px 100px;
+  padding: 20px 0;
+  display: block;
+  width: 200px;
   font-size: 1.2rem;
   transition: all 0.2s;
   cursor: pointer;
@@ -10,5 +17,10 @@
   &:hover {
     background: #fff;
     color: #199ada;
+  }
+
+  // lg
+  @media (min-width: 1024px) {
+    width: 300px;
   }
 }

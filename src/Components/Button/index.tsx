@@ -9,9 +9,11 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 export const Button = ({ children, type = "button" }: ButtonProps) => {
   return (
     <>
-      <button className={styles.button} type={type}>
-        {children}
-      </button>
+      <div className={styles.container}>
+        <button className={styles.button} type={type}>
+          {children}
+        </button>
+      </div>
     </>
   );
 };

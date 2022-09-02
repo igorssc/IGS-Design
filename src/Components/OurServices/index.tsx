@@ -19,7 +19,7 @@ export const OurServices = () => {
       title: "Criação gráfica",
       _icon: PaintBrush,
       description:
-        "Construção de marcas, identidade visual, redesign e modernização de logotipos, logomarcas e símbolos. Design de folders, folhetos e flyers, criação de cartões de visita, convites, timbrados, envelopes, etc.",
+        "Construção de marcas, identidade visual, redesign e modernização de logotipos, logomarcas e símbolos. Design de folders, folhetos e flyers, criação de cartões de visita, convites, timbrados, envelopes, banners, etc.",
       link: "/design-grafico",
     },
   ];
