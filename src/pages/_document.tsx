@@ -26,6 +26,14 @@ class Document extends NextDocument {
           />
         </Head>
         <body>
+          <div id="fb-root"></div>
+          <script
+            async
+            defer
+            crossOrigin="anonymous"
+            src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v14.0"
+            nonce="iEJHFMgb"
+          ></script>
           <Main />
           <NextScript />
         </body>

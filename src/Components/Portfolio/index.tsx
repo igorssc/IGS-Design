@@ -1,8 +1,16 @@
 import "photoswipe/dist/photoswipe.css";
 
 import { Container } from "../Container";
-import { Gallery } from "../Galery";
+import { Gallery } from "../Gallery";
 // import { Gallery } from '../Galery'
+import portfolio6Img from "../../../public/portfolio/camisa-de-formatura-2017-colegio-cramer.jpeg";
+import portfolio1Img from "../../../public/portfolio/cartao-de-visita-igs-design.jpeg";
+import portfolio5Img from "../../../public/portfolio/cartao-de-visita-josi-dias-moda-e-acessorios.jpeg";
+import portfolio2Img from "../../../public/portfolio/cartao-de-visita-salao-lion.jpeg";
+import portfolio7Img from "../../../public/portfolio/cartao-de-visita-somatorio-nucleo-de-ensino.jpeg";
+import portfolio4Img from "../../../public/portfolio/cartao-de-visita-studio-brunna-dutra.jpeg";
+import portfolio3Img from "../../../public/portfolio/convite-musical-sesi.jpeg";
+import portfolio8Img from "../../../public/portfolio/panfleto-promocao-de-natal-opticas-imperador.jpeg";
 import { SkyBackground } from "../SkyBackground";
 import { Title } from "../Title";
 import styles from "./styles.module.scss";
@@ -10,64 +18,36 @@ import styles from "./styles.module.scss";
 export const Portfolio = () => {
   const items = [
     {
-      original: "https://placekitten.com/1024/768?image=1",
-      thumbnail: "https://placekitten.com/200/150?image=1",
+      original: portfolio1Img,
+      thumbnail: portfolio1Img,
     },
     {
-      original: "https://placekitten.com/1024/768?image=2",
-      thumbnail: "https://placekitten.com/200/150?image=2",
+      original: portfolio2Img,
+      thumbnail: portfolio2Img,
     },
     {
-      original: "https://placekitten.com/1024/768?image=3",
-      thumbnail: "https://placekitten.com/200/150?image=3",
+      original: portfolio3Img,
+      thumbnail: portfolio3Img,
     },
     {
-      original: "https://placekitten.com/1024/768?image=4",
-      thumbnail: "https://placekitten.com/200/150?image=4",
+      original: portfolio4Img,
+      thumbnail: portfolio4Img,
     },
     {
-      original: "https://placekitten.com/1024/768?image=5",
-      thumbnail: "https://placekitten.com/200/150?image=5",
+      original: portfolio5Img,
+      thumbnail: portfolio5Img,
     },
     {
-      original: "https://placekitten.com/1024/768?image=6",
-      thumbnail: "https://placekitten.com/200/150?image=6",
+      original: portfolio6Img,
+      thumbnail: portfolio6Img,
     },
     {
-      original: "https://placekitten.com/1024/768?image=7",
-      thumbnail: "https://placekitten.com/200/150?image=7",
+      original: portfolio7Img,
+      thumbnail: portfolio7Img,
     },
     {
-      original: "https://placekitten.com/1024/768?image=8",
-      thumbnail: "https://placekitten.com/200/150?image=8",
-    },
-    {
-      original: "https://placekitten.com/1024/768?image=9",
-      thumbnail: "https://placekitten.com/200/150?image=9",
-    },
-    {
-      original: "https://placekitten.com/1024/768?image=10",
-      thumbnail: "https://placekitten.com/200/150?image=10",
-    },
-    {
-      original: "https://placekitten.com/1024/768?image=11",
-      thumbnail: "https://placekitten.com/200/150?image=11",
-    },
-    {
-      original: "https://placekitten.com/1024/768?image=12",
-      thumbnail: "https://placekitten.com/200/150?image=12",
-    },
-    {
-      original: "https://placekitten.com/1024/768?image=13",
-      thumbnail: "https://placekitten.com/200/150?image=13",
-    },
-    {
-      original: "https://placekitten.com/1024/768?image=14",
-      thumbnail: "https://placekitten.com/200/150?image=14",
-    },
-    {
-      original: "https://placekitten.com/1024/768?image=15",
-      thumbnail: "https://placekitten.com/200/150?image=15",
+      original: portfolio8Img,
+      thumbnail: portfolio8Img,
     },
   ];
   return (
@@ -76,7 +56,7 @@ export const Portfolio = () => {
         <Container>
           <div className={styles.content}>
             <Title>Nosso portfólio</Title>
-            <div className={styles.galery}>
+            <div className={styles.gallery}>
               <Gallery items={items} />
             </div>
           </div>

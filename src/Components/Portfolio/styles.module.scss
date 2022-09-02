@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 70px;
 
-  .galery {
+  .gallery {
     display: grid;
     gap: 2rem;
     justify-content: center;
@@ -22,8 +22,8 @@
     }
 
     // 2xl
-    @media (min-width: 1536px) {
-      grid-template-columns: repeat(5, 1fr);
-    }
+    // @media (min-width: 1536px) {
+    //   grid-template-columns: repeat(5, 1fr);
+    // }
   }
 }

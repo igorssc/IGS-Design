@@ -1,23 +1,24 @@
+import { StaticImageData } from "next/image";
 import "photoswipe/style.css";
 import { LegacyRef } from "react";
 import { Gallery as GaleryPhotoswipe, Item } from "react-photoswipe-gallery";
 import styles from "./styles.module.scss";
 
-interface GaleryProps {
+interface GalleryProps {
   items: {
-    original: string;
-    thumbnail: string;
+    original: StaticImageData;
+    thumbnail: StaticImageData;
   }[];
 }
 
-export const Gallery = ({ items }: GaleryProps) => {
+export const Gallery = ({ items }: GalleryProps) => {
   return (
     <>
       <GaleryPhotoswipe>
         {items.map((item, key) => (
           <Item
-            original={item.original}
-            thumbnail={item.thumbnail}
+            original={item.original.src}
+            thumbnail={item.thumbnail.src}
             width="1024"
             height="768"
             key={key}
@@ -28,7 +29,7 @@ export const Gallery = ({ items }: GaleryProps) => {
                 alt="portfolio"
                 ref={ref as LegacyRef<HTMLImageElement> | undefined}
                 onClick={open}
-                src={item.thumbnail}
+                src={item.thumbnail.src}
                 className={styles.item}
               />
             )}
