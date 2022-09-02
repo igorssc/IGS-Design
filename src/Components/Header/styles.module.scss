@@ -1,0 +1,24 @@
+.content {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 150px 0;
+  gap: 4rem;
+
+  // lg
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 150px 0 250px 0;
+    gap: 0;
+  }
+
+  .image {
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+  }
+
+  p {
+    text-align: justify;
+  }
+}

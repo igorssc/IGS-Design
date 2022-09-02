@@ -1,0 +1,56 @@
+.container {
+  margin: -100px 0;
+
+  .background {
+    background: #199ada;
+    color: #fff;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+
+    > div {
+      display: grid;
+      gap: 70px;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      // md
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        .icon {
+          padding: 30px;
+          border-radius: 100%;
+          border: 1px solid #fff;
+
+          svg {
+            color: #fff;
+          }
+
+          &:hover {
+            background: #fff;
+
+            svg {
+              color: #199ada;
+            }
+          }
+        }
+      }
+
+      p {
+        text-align: justify;
+      }
+    }
+  }
+}

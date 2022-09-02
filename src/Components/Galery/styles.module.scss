@@ -1,0 +1,14 @@
+.item {
+  border-radius: 3px;
+  transition: all 0.2;
+  cursor: pointer;
+  border: 3px solid #fff;
+  -webkit-box-shadow: 3px 3px 15px -7px rgba(0, 0, 0, 0.54);
+  box-shadow: 3px 3px 15px -7px rgba(0, 0, 0, 0.54);
+  border-radius: 6px;
+  margin: auto;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

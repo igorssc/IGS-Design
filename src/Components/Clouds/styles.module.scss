@@ -1,0 +1,11 @@
+.container {
+  background: url(../../../public/clouds.svg);
+  background-repeat: repeat-x;
+  background-size: cover;
+  height: 100px;
+  width: 100%;
+
+  &.bottom {
+    transform: rotate(180deg);
+  }
+}

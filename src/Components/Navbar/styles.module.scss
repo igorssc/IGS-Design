@@ -1,0 +1,122 @@
+.container {
+  padding: 5px 0;
+  background-color: #199ada;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      width: 40px;
+      height: auto;
+      filter: brightness(3);
+      padding: 5px 0;
+
+      @media (min-width: 1024px) {
+        padding: 0;
+      }
+    }
+
+    .navbarItems {
+      position: absolute;
+      z-index: 60;
+      background: #199ada;
+      height: 100vh;
+      max-width: calc(100% - 60px);
+      top: 0;
+      left: -300px;
+      padding: 0 20px;
+      transition: all 0.5s;
+      color: #fff;
+      overflow-y: scroll;
+
+      &.isOpen {
+        left: 0;
+      }
+
+      .iconCloseNavbar {
+        display: block;
+        margin: 10px 0 10px auto;
+
+        @media (min-width: 1024px) {
+          display: none;
+        }
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+
+        li {
+          text-transform: uppercase;
+          font-weight: bold;
+          padding-bottom: 4px;
+          border-bottom: none;
+          font-size: 0.9rem;
+
+          &.active {
+            color: #0d435e;
+          }
+        }
+      }
+
+      @media (min-width: 1024px) {
+        position: initial;
+        height: auto;
+        background: transparent;
+        overflow-y: auto;
+
+        ul {
+          flex-direction: row;
+          gap: 2rem;
+
+          li {
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+              color: #0d435e;
+            }
+
+            &.active {
+              color: inherit;
+              border-color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .navbarIconMobile {
+      display: block;
+
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.backdrop {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: -10;
+  transition-duration: 0.5s;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  &.isOpen {
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
