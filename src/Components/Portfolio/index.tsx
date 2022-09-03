@@ -11,7 +11,6 @@ import portfolio7Img from "../../../public/portfolio/cartao-de-visita-somatorio-
 import portfolio4Img from "../../../public/portfolio/cartao-de-visita-studio-brunna-dutra.jpeg";
 import portfolio3Img from "../../../public/portfolio/convite-musical-sesi.jpeg";
 import portfolio8Img from "../../../public/portfolio/panfleto-promocao-de-natal-opticas-imperador.jpeg";
-import { SkyBackground } from "../SkyBackground";
 import { Title } from "../Title";
 import styles from "./styles.module.scss";
 
@@ -52,16 +51,14 @@ export const Portfolio = () => {
   ];
   return (
     <>
-      <SkyBackground>
-        <Container>
-          <div className={styles.content}>
-            <Title>Nosso portfólio</Title>
-            <div className={styles.gallery}>
-              <Gallery items={items} />
-            </div>
+      <Container>
+        <div className={styles.content}>
+          <Title>Nosso portfólio</Title>
+          <div className={styles.gallery}>
+            <Gallery items={items} />
           </div>
-        </Container>
-      </SkyBackground>
+        </div>
+      </Container>
     </>
   );
 };

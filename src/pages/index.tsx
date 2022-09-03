@@ -1,9 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { AdditionalInformation } from "../Components/AdditionalInformation";
+import { BackgroundSky } from "../Components/BackgroundSky";
+import { Banner } from "../Components/Banner";
 import { Header } from "../Components/Header";
+import { OurClients } from "../Components/OurClients";
 import { OurServices } from "../Components/OurServices";
 import { Portfolio } from "../Components/Portfolio";
+import { Title } from "../Components/Title";
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +17,15 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <OurServices />
-      <Portfolio />
+      <BackgroundSky>
+        <Portfolio />
+        <OurClients />
+      </BackgroundSky>
+      <Banner>
+        <Title _as="h2" scheme="secondary">
+          Não perca tempo e entre em contato hoje mesmo!
+        </Title>
+      </Banner>
       <AdditionalInformation />
     </>
   );

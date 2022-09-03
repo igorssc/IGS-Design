@@ -3,7 +3,13 @@
   justify-content: center;
   align-items: center;
   padding: 50px 0 150px 0;
-  gap: 4rem;
+  gap: 70px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 
   // lg
   @media (min-width: 1024px) {

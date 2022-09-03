@@ -6,35 +6,16 @@
   > div:nth-child(1) {
     margin: auto;
     width: 343px;
-    max-width: 100%;
   }
 
-  // md
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-      "a a a a"
-      "b b c c";
-
+  @media (max-width: 380px) {
     > div:nth-child(1) {
-      grid-area: a;
-    }
-    > div:nth-child(2) {
-      grid-area: b;
-    }
-    > div:nth-child(3) {
-      grid-area: c;
+      width: 100%;
     }
   }
 
-  // xl
-  @media (min-width: 1280px) {
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "a b c";
-
-    > div:nth-child(1) {
-      margin-bottom: 0;
-    }
   }
 
   .ourServices {
@@ -60,13 +41,24 @@
       .icons {
         margin-top: 40px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
         gap: 20px;
         color: #fff;
 
+        > span:nth-child(1) {
+          grid-column-start: 2;
+        }
+        > span:nth-child(2) {
+          grid-column-start: 3;
+        }
+        > span:nth-child(3) {
+          grid-column-start: 4;
+        }
+
         span {
-          width: 70px;
-          height: 70px;
+          width: 60px;
+          height: 60px;
           background: #199ada;
           border-radius: 100%;
           display: flex;

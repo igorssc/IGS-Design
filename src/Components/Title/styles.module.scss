@@ -2,6 +2,14 @@
   margin: auto;
   text-align: center;
 
+  &.primary {
+    color: #000;
+  }
+
+  &.secondary {
+    color: #fff;
+  }
+
   // md
   @media (min-width: 768px) {
     max-width: 768px;

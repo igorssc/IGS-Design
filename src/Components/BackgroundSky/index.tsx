@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 import styles from "./styles.module.scss";
 
-interface SkyBackgroundProps {
+interface BackgroundSkyProps {
   children: ReactNode;
 }
 
-export const SkyBackground = ({ children }: SkyBackgroundProps) => {
+export const BackgroundSky = ({ children }: BackgroundSkyProps) => {
   return (
     <>
       <div className={styles.container}>{children}</div>

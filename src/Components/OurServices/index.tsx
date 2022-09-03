@@ -31,19 +31,21 @@ export const OurServices = () => {
         <div className={styles.background}>
           <Container>
             <div className={styles.content}>
-              <Title>Nossos serviços</Title>
+              <Title scheme="secondary">Nossos serviços</Title>
               <div>
                 {services.map(({ title, _icon, description, link }, index) => (
                   <div key={index}>
                     <div className={styles.icon}>
                       <_icon size={40} />
                     </div>
-                    <Title _as="h2">{title}</Title>
+                    <Title _as="h2" scheme="secondary">
+                      {title}
+                    </Title>
                     <p>{description}</p>
-                    <Link href={link} passHref>
-                      <a href={link}>
-                        <Button>Saiba mais</Button>
-                      </a>
+                    <Link href={link}>
+                      <Button _as="a" href={link}>
+                        Saiba mais
+                      </Button>
                     </Link>
                   </div>
                 ))}

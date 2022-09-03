@@ -1,22 +1,37 @@
 .container {
-  display: block;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .button {
-  border: 1px solid #fff;
-  background: transparent;
-  color: #fff;
   padding: 20px 0;
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 200px;
   font-size: 1.2rem;
   transition: all 0.2s;
   cursor: pointer;
 
-  &:hover {
+  &.primary {
+    background: #199ada;
+    border: 1px solid #fff;
+    color: #fff;
+
+    &:hover {
+      background: #fff;
+      color: #199ada;
+    }
+  }
+
+  &.secondary {
     background: #fff;
+    border: 1px solid #fff;
     color: #199ada;
+
+    &:hover {
+      background: #199ada;
+      color: #fff;
+    }
   }
 
   // lg

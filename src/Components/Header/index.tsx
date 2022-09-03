@@ -1,13 +1,13 @@
 import DevelopersCreatingImg from "../../../public/developers-creating-website.svg";
+import { BackgroundSky } from "../BackgroundSky";
 import { Container } from "../Container";
-import { SkyBackground } from "../SkyBackground";
 import { Title } from "../Title";
 import styles from "./styles.module.scss";
 
 export const Header = () => {
   return (
     <>
-      <SkyBackground>
+      <BackgroundSky>
         <Container>
           <div className={styles.content}>
             <div>
@@ -24,7 +24,7 @@ export const Header = () => {
             <DevelopersCreatingImg className={styles.image} />
           </div>
         </Container>
-      </SkyBackground>
+      </BackgroundSky>
     </>
   );
 };
