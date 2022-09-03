@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { AdditionalInformation } from "../Components/AdditionalInformation";
 import { BackgroundSky } from "../Components/BackgroundSky";
 import { Banner } from "../Components/Banner";
 import { Header } from "../Components/Header";
@@ -26,7 +25,6 @@ const Home: NextPage = () => {
           Não perca tempo e entre em contato hoje mesmo!
         </Title>
       </Banner>
-      <AdditionalInformation />
     </>
   );
 };
