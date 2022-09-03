@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { List, X } from "phosphor-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LogoImg from "../../../public/logo-igs-design.svg";
 import { Container } from "../Container";
 import styles from "./styles.module.scss";
@@ -18,6 +18,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { pathname } = useRouter();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <>
@@ -47,7 +51,7 @@ const Navbar = () => {
               size={32}
               color="#ffffff"
               className={styles.navbarIconMobile}
-              onClick={() => setIsOpen((current) => !current)}
+              onClick={() => setIsOpen(true)}
             />
             <div
               className={`${styles.backdrop} ${isOpen && styles.isOpen}`}
