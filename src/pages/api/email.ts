@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 type DataProps = {
   name: string;
   email: string;
-  phone: string;
+  phone?: string;
   subject: string;
   message: string;
 };
@@ -47,18 +47,18 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
 
   await transporter
     .sendMail({
-      from: `Formulário Web <${process.env.USERMAIL}>`,
+      from: `Formulário Web <formulario@igsdesign.com.br>`,
       to: process.env.USERMAIL,
       replyTo: data.email,
       subject: data.subject,
       text: data.message,
       html: `
       
-        <b>Nome: </b> ${data.name},
+        <b>Nome: </b> ${data.name}
         <br>
-        <b>Email: </b> ${data.email},
+        <b>Email: </b> ${data.email}
         <br>
-        ${data.phone ? `<b>Telefone: </b> ${data.phone},` : ""}
+        ${data.phone ? `<b>Telefone: </b> ${data.phone}` : ""}
         
         <br><br>
         
