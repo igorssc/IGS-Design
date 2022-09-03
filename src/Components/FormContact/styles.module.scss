@@ -1,0 +1,73 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  padding: 50px 0;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template:
+        "a e"
+        "b e"
+        "c e"
+        "d e"
+        "f f";
+
+      > div:nth-child(1) {
+        grid-area: a;
+      }
+      > div:nth-child(2) {
+        grid-area: b;
+      }
+      > div:nth-child(3) {
+        grid-area: c;
+      }
+      > div:nth-child(4) {
+        grid-area: d;
+      }
+      > div:nth-child(5) {
+        grid-area: e;
+      }
+      > .button {
+        grid-area: f;
+      }
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      input,
+      textarea,
+      select {
+        background: #199ada33;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      textarea {
+        height: 200px;
+      }
+
+      @media (min-width: 1024px) {
+        textarea {
+          height: 100%;
+        }
+      }
+    }
+
+    .button {
+      justify-self: center;
+      margin-top: 20px;
+    }
+  }
+}
