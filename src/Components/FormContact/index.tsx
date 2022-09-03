@@ -82,6 +82,7 @@ export const FormContact = () => {
                 id="name"
                 value={nameValue}
                 onChange={(e) => setNameValue(e.target.value)}
+                minLength={10}
               />
             </div>
             <div>
@@ -92,6 +93,7 @@ export const FormContact = () => {
                 id="email"
                 value={emailValue}
                 onChange={(e) => setEmailValue(e.target.value)}
+                minLength={10}
               />
             </div>
             <div>
@@ -128,6 +130,7 @@ export const FormContact = () => {
                 id="message"
                 value={messageValue}
                 onChange={(e) => setMessageValue(e.target.value)}
+                minLength={10}
               ></textarea>
             </div>
             <div className={styles.button}>

@@ -1,6 +1,14 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
+type DataProps = {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+};
+
 const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
   const transporter = nodemailer.createTransport({
     host: process.env.HOSTMAIL,
@@ -15,7 +23,8 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
     },
   });
 
-  const data = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+  const data: DataProps =
+    typeof req.body === "string" ? JSON.parse(req.body) : req.body;
 
   if (data === undefined) {
     throw new Error();
@@ -29,7 +38,7 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
       "message" in data
     ) ||
     data.name.length < 10 ||
-    data.email.length < 5 ||
+    data.email.length < 10 ||
     data.subject.length < 5 ||
     data.message.length < 10
   ) {
@@ -53,7 +62,7 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
         
         <br><br>
         
-        ${data.message}
+        ${data.message.replaceAll("\n", "<br/>")}
         
         `,
     })
