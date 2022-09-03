@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import nodemailer from 'nodemailer'
+import { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
 
 const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
   const transporter = nodemailer.createTransport({
@@ -7,33 +7,33 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
     port: 587,
     auth: {
       user: process.env.USERMAIL,
-      pass: process.env.PASSMAIL
+      pass: process.env.PASSMAIL,
     },
     tls: {
       rejectUnauthorized: false,
-      ciphers: 'SSLv3'
-    }
-  })
+      ciphers: "SSLv3",
+    },
+  });
 
-  const data = typeof req.body === 'string' ? JSON.parse(req.body) : req.body
+  const data = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
 
   if (data === undefined) {
-    throw new Error()
+    throw new Error();
   }
 
   if (
     !(
-      'name' in data &&
-      'email' in data &&
-      'subject' in data &&
-      'message' in data
+      "name" in data &&
+      "email" in data &&
+      "subject" in data &&
+      "message" in data
     ) ||
     data.name.length < 10 ||
     data.email.length < 5 ||
     data.subject.length < 5 ||
     data.message.length < 10
   ) {
-    throw new Error()
+    throw new Error();
   }
 
   await transporter
@@ -49,18 +49,18 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
         <br>
         <b>Email: </b> ${data.email},
         <br>
-        ${data.phone ? `<b>Telefone: </b> ${data.phone},` : ''}
+        ${data.phone ? `<b>Telefone: </b> ${data.phone},` : ""}
         
         <br><br>
         
         ${data.message}
         
-        `
+        `,
     })
-    .then(response => {
-      res.send(response)
+    .then((response) => {
+      res.send(response);
     })
-    .catch(error => res.send(error))
-}
+    .catch((error) => res.send(error));
+};
 
-export default sendEmail
+export default sendEmail;
