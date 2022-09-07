@@ -1,12 +1,50 @@
 .container {
-  background: url(../../../public/clouds.svg);
-  background-repeat: repeat-x;
-  background-size: cover;
-  height: 100px;
-  width: 100%;
   transition: all 0.3s;
+  position: relative;
+  margin-top: 20px;
+
+  * {
+    background: url(../../../public/clouds.svg);
+    background-repeat: repeat-x;
+    background-size: cover;
+    height: 100px;
+    width: 200%;
+  }
+  .primary {
+    animation: anim-moviment-primary 80s linear infinite alternate;
+    position: relative;
+    z-index: 90;
+  }
+
+  .secondary {
+    animation: anim-moviment-secondary 80s linear infinite alternate;
+    position: absolute;
+    z-index: 80;
+    filter: brightness(0.8) contrast(5) drop-shadow(5px 0px 5px #222);
+    top: -10px;
+  }
 
   &.bottom {
     transform: rotate(180deg);
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+@keyframes anim-moviment-primary {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes anim-moviment-secondary {
+  from {
+    transform: translateX(-10vw);
+  }
+  to {
+    transform: translateX(-50vw);
   }
 }

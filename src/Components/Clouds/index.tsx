@@ -11,7 +11,10 @@ export const Clouds = ({ position }: CloudsProps) => {
         className={`${styles.container} ${
           position === "top" ? styles.top : styles.bottom
         }`}
-      />
+      >
+        <div className={styles.primary}></div>
+        <div className={styles.secondary}></div>
+      </div>
     </>
   );
 };

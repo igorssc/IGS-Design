@@ -57,7 +57,8 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
         style="
           padding: 20px;
           background: #199ada;
-          color: #fff
+          color: #fff;
+          line-height: 2rem
         "
       >
         <h1 style="margin-bottom: 20px; font-size: 1.8rem">Formulário Web</h1>
@@ -75,7 +76,10 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
           <strong>Assunto: </strong>${data.subject}
         </p>
       </div>
-      <p style="padding: 20px">${data.message.replaceAll("\n", "<br/>")}</p>
+      <p style="padding: 20px; line-height: 2rem">${data.message.replaceAll(
+        "\n",
+        "<br/>"
+      )}</p>
     `,
     })
     .then((response) => {
