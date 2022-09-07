@@ -4,6 +4,7 @@
   background-size: cover;
   height: 100px;
   width: 100%;
+  transition: all 0.3s;
 
   &.bottom {
     transform: rotate(180deg);

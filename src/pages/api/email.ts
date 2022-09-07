@@ -47,24 +47,39 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
 
   await transporter
     .sendMail({
-      from: `Formulário Web <formulario@igsdesign.com.br>`,
+      from: `Formulário Web <${process.env.USERMAIL}>`,
       to: process.env.USERMAIL,
       replyTo: data.email,
       subject: data.subject,
       text: data.message,
-      html: `
-      
-        <b>Nome: </b> ${data.name}
-        <br>
-        <b>Email: </b> ${data.email}
-        <br>
-        ${data.phone ? `<b>Telefone: </b> ${data.phone}` : ""}
-        
-        <br><br>
-        
-        ${data.message.replaceAll("\n", "<br/>")}
-        
-        `,
+      html: ` 
+      <div
+        style="
+          padding: '50px 20px';
+          background: '#199ada';
+          color: '#fff'
+        "
+      >
+        <h1 style="margin-bottom: '20px'">Formulário Web</h1>
+        <p>
+          <strong>Nome: </strong>${data.name}
+          <br />
+          <strong>E-mail: </strong>${data.email}
+          ${
+            data.phone
+              ? `<br />
+          <strong>Telefone: </strong>${data.phone}`
+              : ""
+          }
+          <br />
+          <strong>Assunto: </strong>${data.subject}
+        </p>
+      </div>
+      <p style="padding: '50px 20px'">${data.message.replaceAll(
+        "\n",
+        "<br/>"
+      )}</p>
+    `,
     })
     .then((response) => {
       res.send(response);
