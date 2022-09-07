@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <Portfolio />
         <OurClients />
       </BackgroundSky>
-      <Banner>
+      <Banner button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}>
         <Title _as="h2" scheme="secondary">
           Não perca tempo e entre em contato hoje mesmo!
         </Title>

@@ -8,3 +8,14 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+  }
+}

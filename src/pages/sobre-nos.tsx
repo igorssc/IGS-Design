@@ -13,7 +13,7 @@ const SobreNos: NextPage = () => {
       </Head>
       <About />
       <Clouds position="top" />
-      <Banner>
+      <Banner button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}>
         <Title _as="h2" scheme="secondary">
           Não perca tempo e entre em contato hoje mesmo!
         </Title>

@@ -14,8 +14,15 @@
   // lg
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr;
-    padding: 150px 0 250px 0;
+    padding: 100px 0 200px 0;
     gap: 0;
+  }
+
+  .logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    filter: brightness(0);
   }
 
   .image {
@@ -23,9 +30,20 @@
     max-width: 100%;
     height: auto;
     margin: auto;
+    animation: float 6s ease-in-out infinite;
   }
 
   p {
     text-align: justify;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-30px);
   }
 }

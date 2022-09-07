@@ -1,4 +1,5 @@
 import DevelopersCreatingImg from "../../../public/developers-creating-website.svg";
+import LogoImg from "../../../public/logo-igs-design.svg";
 import { BackgroundSky } from "../BackgroundSky";
 import { Container } from "../Container";
 import { Title } from "../Title";
@@ -11,6 +12,7 @@ export const Header = () => {
         <Container>
           <div className={styles.content}>
             <div>
+              <LogoImg className={styles.logo} />
               <Title position="left">Criatividade que faz a diferença</Title>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean

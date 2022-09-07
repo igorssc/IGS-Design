@@ -1,6 +1,8 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import { Banner } from "../Components/Banner";
 import { FormContact } from "../Components/FormContact";
+import { Title } from "../Components/Title";
 
 const FaleConosco: NextPage = () => {
   return (
@@ -9,6 +11,16 @@ const FaleConosco: NextPage = () => {
         <title>IGS Design - Fale conosco</title>
       </Head>
       <FormContact />
+      <Banner
+        button={[
+          { href: "/sites", text: "DESENVOLVIMENTO DE SITES" },
+          { href: "/design-grafico", text: "DESIGN GRÁFICO" },
+        ]}
+      >
+        <Title _as="h2" scheme="secondary">
+          Já conhece os serviços da IGS?
+        </Title>
+      </Banner>
     </>
   );
 };
