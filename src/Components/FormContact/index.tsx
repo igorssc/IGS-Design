@@ -34,32 +34,28 @@ export const FormContact = () => {
 
     handleOpenBackdrop();
 
-    await Promise.resolve(
-      fetch("/api/email", {
+    try {
+      const response = await fetch("/api/email", {
         method: "POST",
         body: JSON.stringify(body),
-      })
-        .then((response) => {
-          if (response.status === 200) {
-            handleClickSnackbarVariant(
-              "Mensagem enviada com sucesso!",
-              "success"
-            );
-            setNameValue("");
-            setEmailValue("");
-            setPhoneValue("");
-            setSubjectValue("");
-            setMessageValue("");
-          } else {
-            handleClickSnackbarVariant("Erro ao enviar a mensagem", "error");
-          }
-        })
-        .catch(() =>
-          handleClickSnackbarVariant("Erro ao enviar a mensagem", "error")
-        )
-    );
+      });
+      const data = await response.json();
 
-    handleCloseBackdrop();
+      if (response.status === 200 && data.accepted) {
+        handleClickSnackbarVariant("Mensagem enviada com sucesso!", "success");
+        setNameValue("");
+        setEmailValue("");
+        setPhoneValue("");
+        setSubjectValue("");
+        setMessageValue("");
+      } else {
+        throw new Error();
+      }
+    } catch {
+      handleClickSnackbarVariant("Erro ao enviar a mensagem", "error");
+    } finally {
+      handleCloseBackdrop();
+    }
   };
 
   return (
