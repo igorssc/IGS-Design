@@ -9,5 +9,10 @@
     flex-direction: column;
     gap: 20px;
     text-align: justify;
+
+    p {
+      position: relative;
+      z-index: 50;
+    }
   }
 }

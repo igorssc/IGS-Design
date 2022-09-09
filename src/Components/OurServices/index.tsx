@@ -27,7 +27,7 @@ export const OurServices = () => {
   return (
     <>
       <div className={styles.container}>
-        <Clouds position="top" />
+        <Clouds />
         <div className={styles.background}>
           <Container>
             <div className={styles.content}>

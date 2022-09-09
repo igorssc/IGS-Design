@@ -2,6 +2,8 @@
   margin: auto;
   text-align: center;
   font-weight: normal;
+  position: relative;
+  z-index: 50;
 
   &.primary {
     color: #000;

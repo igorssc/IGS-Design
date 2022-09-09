@@ -1,6 +1,7 @@
 import { useSnackbar } from "notistack";
 import { useState } from "react";
 import { useBackdrop } from "../../hooks/useBackdrop";
+import { maskPhone } from "../../utils/mask";
 import { Button } from "../Button";
 import { Container } from "../Container";
 import { Title } from "../Title";
@@ -25,12 +26,54 @@ export const FormContact = () => {
 
   const sendEmail = async () => {
     const body = {
-      name: nameValue,
-      email: emailValue,
-      phone: phoneValue,
+      name: nameValue.trim(),
+      email: emailValue.trim().toLowerCase(),
+      phone: phoneValue.trim(),
       subject: subjectValue,
-      message: messageValue,
+      message: messageValue.trim(),
     };
+
+    if (body.name.split(" ").length < 2) {
+      handleClickSnackbarVariant(
+        "Insira seu nome completo, por favor",
+        "warning"
+      );
+      document.getElementById("name")?.focus();
+      return;
+    }
+    if (
+      !body.email.match(
+        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+    ) {
+      handleClickSnackbarVariant(
+        "Insira um e-mail válido, por favor",
+        "warning"
+      );
+      document.getElementById("email")?.focus();
+      return;
+    }
+    if (body.phone.length < 14) {
+      handleClickSnackbarVariant(
+        "Insira seu telefone completo, com DDD, por favor",
+        "warning"
+      );
+      document.getElementById("phone")?.focus();
+      return;
+    }
+    if (body.message.length < 10) {
+      handleClickSnackbarVariant(
+        "Sua mensagem deve conter ao menos 10 caracteres",
+        "warning"
+      );
+      document.getElementById("message")?.focus();
+      return;
+    }
+    if (!body.subject) {
+      handleClickSnackbarVariant("Selecione um assunto, por favor", "warning");
+      document.getElementById("subject")?.focus();
+      return;
+    }
 
     handleOpenBackdrop();
 
@@ -73,40 +116,34 @@ export const FormContact = () => {
             <div>
               <label htmlFor="name">Nome completo:</label>
               <input
-                required
                 type="text"
                 id="name"
                 value={nameValue}
                 onChange={(e) => setNameValue(e.target.value)}
-                minLength={10}
               />
             </div>
             <div>
               <label htmlFor="email">E-mail:</label>
               <input
-                required
                 type="text"
                 id="email"
                 value={emailValue}
                 onChange={(e) => setEmailValue(e.target.value)}
-                minLength={10}
               />
             </div>
             <div>
               <label htmlFor="phone">Telefone:</label>
               <input
-                required
                 type="text"
                 id="phone"
                 value={phoneValue}
-                onChange={(e) => setPhoneValue(e.target.value)}
+                onChange={(e) => setPhoneValue(maskPhone(e.target.value))}
               />
             </div>
             <div>
               <label htmlFor="subject">Assunto:</label>
               <select
                 id="subject"
-                required
                 value={subjectValue}
                 onChange={(e) => setSubjectValue(e.target.value)}
               >
@@ -122,11 +159,9 @@ export const FormContact = () => {
             <div>
               <label htmlFor="message">Mensagem:</label>
               <textarea
-                required
                 id="message"
                 value={messageValue}
                 onChange={(e) => setMessageValue(e.target.value)}
-                minLength={10}
               ></textarea>
             </div>
             <div className={styles.button}>

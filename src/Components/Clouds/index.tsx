@@ -1,10 +1,10 @@
 import styles from "./styles.module.scss";
 
 interface CloudsProps {
-  position: "top" | "bottom";
+  position?: "top" | "bottom";
 }
 
-export const Clouds = ({ position }: CloudsProps) => {
+export const Clouds = ({ position = "top" }: CloudsProps) => {
   return (
     <>
       <div

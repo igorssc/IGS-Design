@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import { Banner } from "../Components/Banner";
+import { Clouds } from "../Components/Clouds";
 import { FormContact } from "../Components/FormContact";
 import { Title } from "../Components/Title";
 
@@ -11,6 +12,7 @@ const FaleConosco: NextPage = () => {
         <title>IGS Design - Fale conosco</title>
       </Head>
       <FormContact />
+      <Clouds />
       <Banner
         button={[
           { href: "/sites", text: "DESENVOLVIMENTO DE SITES" },

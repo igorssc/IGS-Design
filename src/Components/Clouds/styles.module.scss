@@ -13,13 +13,13 @@
   .primary {
     animation: anim-moviment-primary 80s linear infinite alternate;
     position: relative;
-    z-index: 90;
+    z-index: 20;
   }
 
   .secondary {
     animation: anim-moviment-secondary 80s linear infinite alternate;
     position: absolute;
-    z-index: 80;
+    z-index: 10;
     filter: brightness(0) invert(1) drop-shadow(0px 0px 3px #222);
     top: -13px;
   }
