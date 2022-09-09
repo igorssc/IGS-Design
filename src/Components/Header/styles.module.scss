@@ -21,6 +21,12 @@
 
   // lg
   @media (min-width: 1024px) {
+    grid-template-columns: 2fr 1fr;
+    padding: 100px 0 200px 0;
+    gap: 0;
+  }
+
+  @media (min-width: 1536px) {
     grid-template-columns: 1fr 1fr;
     padding: 100px 0 200px 0;
     gap: 0;
@@ -52,17 +58,15 @@
 }
 
 .text {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: hidden;
   font-family: Segoe Print;
   font-weight: bold;
 
-  > span {
-    min-width: 10px;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 
-    @media (min-width: 768px) {
+    > span {
       margin-top: -10px;
 
       @for $i from 1 through 300 {
@@ -72,6 +76,10 @@
         }
       }
     }
+  }
+
+  > span {
+    min-width: 10px;
   }
 }
 
