@@ -1,5 +1,13 @@
 .container {
-  background: url(../../../public/sky_2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  &.primary {
+    background: url(../../../public/sky.jpg);
+  }
+  &.secondary {
+    background: url(../../../public/sky_2.jpg);
+  }
+  &.primary,
+  &.secondary {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

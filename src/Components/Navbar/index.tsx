@@ -23,6 +23,12 @@ const Navbar = () => {
     setIsOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.getElementsByTagName("html")[0].style.overflowY = !isOpen
+      ? "visible"
+      : "hidden";
+  }, [isOpen]);
+
   return (
     <>
       <div className={styles.container}>

@@ -20,7 +20,7 @@
 
     .navbarItems {
       position: absolute;
-      z-index: 60;
+      z-index: 999;
       background: #199ada;
       height: 100vh;
       max-width: calc(100% - 60px);
@@ -116,7 +116,7 @@
   }
 
   &.isOpen {
-    z-index: 50;
+    z-index: 998;
     background: rgba(0, 0, 0, 0.5);
   }
 }
