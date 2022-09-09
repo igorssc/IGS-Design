@@ -9,7 +9,7 @@ export const AdditionalInformation = () => {
       <Container>
         <div className={styles.content}>
           <div>
-            <div
+            {/* <div
               className={`${styles.facebookPage} fb-page`}
               data-href="https://www.facebook.com/design.igs"
               data-tabs="timeline"
@@ -26,7 +26,7 @@ export const AdditionalInformation = () => {
               >
                 <a href="https://www.facebook.com/design.igs">IGS Design</a>
               </blockquote>
-            </div>
+            </div> */}
           </div>
           <div className={styles.ourServices}>
             <Title _as="h3">Nossos serviços</Title>

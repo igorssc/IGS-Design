@@ -1,3 +1,11 @@
+.container {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(2, 25, 113, 0.9) 100%
+  );
+}
+
 .content {
   display: grid;
   justify-content: center;
@@ -22,7 +30,11 @@
     width: 150px;
     height: auto;
     margin: 0 auto;
-    filter: brightness(0);
+    animation: emphasis 4s alternate infinite;
+
+    path {
+      animation: emphasisColor 4s alternate infinite;
+    }
   }
 
   .image {
@@ -34,16 +46,69 @@
   }
 
   p {
-    text-align: justify;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  font-family: Segoe Print;
+  font-weight: bold;
+
+  > span {
+    min-width: 10px;
+
+    @media (min-width: 768px) {
+      margin-top: -10px;
+
+      @for $i from 1 through 300 {
+        &:nth-child(#{$i}) {
+          animation: letter 2s linear alternate infinite;
+          animation-delay: $i * 100ms;
+        }
+      }
+    }
+  }
+}
+
+@keyframes emphasis {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes emphasisColor {
+  0% {
+    fill: #ab93ef;
+    filter: brightness(1.2);
+  }
+  100% {
+    fill: #fff;
+  }
+}
+
+@keyframes letter {
+  0% {
+    margin-top: -15px;
+  }
+  100% {
+    margin-top: 0px;
   }
 }
 
 @keyframes float {
   0%,
   100% {
-    transform: translatey(0);
+    transform: translateY(0);
   }
   50% {
-    transform: translatey(-30px);
+    transform: translateY(-30px);
   }
 }

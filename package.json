@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@carefully-coded/react-text-gradient": "^1.0.6",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.3",
@@ -22,6 +23,7 @@
     "react-dom": "18.2.0",
     "react-multi-carousel": "^2.8.2",
     "react-photoswipe-gallery": "^2.2.1",
+    "react-pulse-text": "^1.0.8",
     "sass": "^1.54.8"
   },
   "devDependencies": {

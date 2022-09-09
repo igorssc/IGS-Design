@@ -53,7 +53,7 @@ export const Portfolio = () => {
     <>
       <Container>
         <div className={styles.content}>
-          <Title>Nosso portfólio</Title>
+          <Title scheme="secondary">Nosso portfólio</Title>
           <div className={styles.gallery}>
             <Gallery items={items} />
           </div>
