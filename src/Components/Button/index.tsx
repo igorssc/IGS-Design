@@ -5,18 +5,23 @@ type ButtonProps = HTMLAttributes<HTMLButtonElement> &
   ButtonTypeProps & {
     children: ReactNode;
     type?: "button" | "submit" | "reset";
-    scheme?: "primary" | "secondary";
+    scheme?: "primary" | "secondary" | "tertiary";
   };
 
 type ButtonTypeProps =
-  | { _as?: "button"; href?: never }
-  | { _as: "a"; href?: string };
+  | { _as?: "button"; href?: never; target?: never }
+  | {
+      _as: "a";
+      href?: string;
+      target?: "_blank" | "_self" | "_parent" | "_top" | "framename";
+    };
 
 export const Button = ({
   children,
   type = "button",
   _as = "button",
   href,
+  target,
   scheme = "primary",
 }: ButtonProps) => {
   return (
@@ -26,6 +31,7 @@ export const Button = ({
           className={`${styles.button} ${styles[scheme]}`}
           type={type}
           href={href}
+          {...(target && { target })}
         >
           {children}
         </_as>

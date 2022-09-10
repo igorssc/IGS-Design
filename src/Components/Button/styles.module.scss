@@ -43,6 +43,17 @@
     }
   }
 
+  &.tertiary {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #df7503;
+
+    &:hover {
+      background: #884d0e;
+      color: #fff;
+    }
+  }
+
   // lg
   @media (min-width: 1024px) {
     width: 300px;

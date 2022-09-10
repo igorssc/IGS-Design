@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <OurServices />
-      <BackgroundSky type="quaternary">
+      <BackgroundSky type="tertiary">
         <div className={styles.fillSky}>
           <Portfolio />
           <OurClients />
