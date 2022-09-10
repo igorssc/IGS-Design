@@ -13,12 +13,14 @@
     padding: 50px 0;
 
     > div {
-      display: grid;
+      display: flex;
+      flex-direction: column;
       gap: 70px;
       align-items: baseline;
 
       // md
       @media (min-width: 768px) {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
       }

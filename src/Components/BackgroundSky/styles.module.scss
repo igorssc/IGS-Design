@@ -1,13 +1,23 @@
 .container {
   &.primary {
-    background: url(../../../public/sky.jpg);
+    background-image: url(../../../public/sky.jpg);
   }
   &.secondary {
-    background: url(../../../public/sky_2.jpg);
+    background-image: url(../../../public/sky_2.jpg);
   }
-  &.primary,
-  &.secondary {
-    background-repeat: no-repeat;
-    background-size: cover;
+  &.tertiary {
+    background-image: url(../../../public/sky_3.jpg);
+  }
+  &.quaternary {
+    background-image: url(../../../public/sky_4.jpg);
+  }
+  &.quinary {
+    background-image: url(../../../public/space.jpg);
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.fixed {
+    background-attachment: fixed;
   }
 }

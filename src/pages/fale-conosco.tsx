@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import { BackgroundParticles } from "../Components/BackgroundParticles";
+import { BackgroundSky } from "../Components/BackgroundSky";
 import { Banner } from "../Components/Banner";
 import { Clouds } from "../Components/Clouds";
 import { FormContact } from "../Components/FormContact";
@@ -12,10 +12,10 @@ const FaleConosco: NextPage = () => {
       <Head>
         <title>IGS Design - Fale conosco</title>
       </Head>
-      <BackgroundParticles>
+      <BackgroundSky type="secondary">
         <FormContact />
-      </BackgroundParticles>
-      <Clouds />
+        <Clouds />
+      </BackgroundSky>
       <Banner
         button={[
           { href: "/sites", text: "DESENVOLVIMENTO DE SITES" },

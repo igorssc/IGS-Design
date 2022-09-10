@@ -4,15 +4,21 @@
 }
 
 .button {
-  padding: 20px 0;
+  padding: 20px 60px;
   display: flex;
   justify-content: center;
-  width: 200px;
+  text-align: center;
+  width: 100%;
   font-size: 1.2rem;
   transition: all 0.2s;
   cursor: pointer;
   position: relative;
   z-index: 50;
+
+  @media (min-width: 640px) {
+    padding: 20px 0;
+    width: 300px;
+  }
 
   &.primary {
     background: #199ada;

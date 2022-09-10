@@ -9,7 +9,7 @@
     width: 60px;
     height: 60px;
     transform: rotate(200deg);
-    color: #199ada;
+    color: #fff;
     margin-bottom: -40px;
 
     @media (min-width: 640px) {
@@ -34,6 +34,7 @@
       flex-direction: column;
       align-items: center;
       gap: 30px;
+      color: #fff;
 
       p {
         text-align: center;
@@ -61,6 +62,7 @@
   width: 30px;
   height: 30px;
   transition: all 0.3s;
+  color: #fff;
 
   &.left {
     left: 0;

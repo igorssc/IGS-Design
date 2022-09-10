@@ -8,6 +8,7 @@ import { OurClients } from "../Components/OurClients";
 import { OurServices } from "../Components/OurServices";
 import { Portfolio } from "../Components/Portfolio";
 import { Title } from "../Components/Title";
+import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -17,9 +18,11 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <OurServices />
-      <BackgroundSky>
-        <Portfolio />
-        <OurClients />
+      <BackgroundSky type="quaternary">
+        <div className={styles.fillSky}>
+          <Portfolio />
+          <OurClients />
+        </div>
       </BackgroundSky>
       <Clouds />
       <Banner button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}>

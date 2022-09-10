@@ -1,4 +1,4 @@
-import FancyText from "@carefully-coded/react-text-gradient";
+import { TypeAnimation } from "react-type-animation";
 import DevelopersCreatingImg from "../../../public/creative-astronaut-kid-character.svg";
 import LogoImg from "../../../public/logo-igs-design.svg";
 import { BackgroundSky } from "../BackgroundSky";
@@ -9,30 +9,25 @@ import styles from "./styles.module.scss";
 export const Header = () => {
   return (
     <>
-      <BackgroundSky type="secondary">
+      <BackgroundSky type="quinary" fixed>
         <div className={styles.container}>
           <Container>
             <div className={styles.content}>
               <div>
                 <LogoImg className={styles.logo} />
-                <Title position="left">
-                  <FancyText
-                    gradient={{
-                      from: "#ab93ef",
-                      to: "#fff",
-                      type: "linear",
-                    }}
-                    animateTo={{ from: "#fff", to: "#889ac1" }}
-                    animateDuration={2000}
-                  >
-                    <span className={styles.text}>
-                      {"Criatividade que faz a diferença"
-                        .split("")
-                        .map((char, index) => (
-                          <span key={index}>{char}</span>
-                        ))}
-                    </span>
-                  </FancyText>
+
+                <Title position="left" scheme="secondary">
+                  <TypeAnimation
+                    sequence={[
+                      "Criatividade que faz a diferença",
+                      2000,
+                      () => {}, // Place optional callbacks,
+                    ]}
+                    wrapper="div"
+                    cursor={true}
+                    repeat={Infinity}
+                    className={styles.slogan}
+                  />
                 </Title>
                 <p>
                   A IGS Design é uma empresa de Marketing Digital e Impresso.

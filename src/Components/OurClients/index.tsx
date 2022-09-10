@@ -66,7 +66,7 @@ export const OurClients = () => {
     <>
       <Container>
         <div className={styles.content}>
-          <Title>Opiniões dos nossos clientes</Title>
+          <Title scheme="secondary">Opiniões dos nossos clientes</Title>
           <Carousel
             responsive={responsive}
             autoPlay={true}
@@ -86,7 +86,9 @@ export const OurClients = () => {
                 <div className={styles.evaluation}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={client.image.src} alt="photo from client" />
-                  <Title _as="h3">{client.name}</Title>
+                  <Title _as="h3" scheme="secondary">
+                    {client.name}
+                  </Title>
                   <p>{client.evaluation}</p>
                 </div>
               </div>

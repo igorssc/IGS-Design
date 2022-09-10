@@ -12,10 +12,12 @@ const SobreNos: NextPage = () => {
       <Head>
         <title>IGS Design - Sobre nós</title>
       </Head>
-      <BackgroundParticles>
-        <About />
-      </BackgroundParticles>
-      <Clouds position="top" />
+      <div style={{ background: "#c8edff" }}>
+        <BackgroundParticles>
+          <About />
+        </BackgroundParticles>
+        <Clouds position="top" />
+      </div>
       <Banner button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}>
         <Title _as="h2" scheme="secondary">
           Não perca tempo e entre em contato hoje mesmo!

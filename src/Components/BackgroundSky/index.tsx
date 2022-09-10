@@ -2,17 +2,25 @@ import { ReactNode } from "react";
 import styles from "./styles.module.scss";
 
 interface BackgroundSkyProps {
-  type?: "primary" | "secondary";
+  type?: "primary" | "secondary" | "tertiary" | "quaternary" | "quinary";
+  fixed?: boolean;
   children: ReactNode;
 }
 
 export const BackgroundSky = ({
   children,
   type = "primary",
+  fixed = false,
 }: BackgroundSkyProps) => {
   return (
     <>
-      <div className={`${styles.container} ${styles[type]}`}>{children}</div>
+      <div
+        className={`${styles.container} ${styles[type]} ${
+          fixed && styles.fixed
+        }`}
+      >
+        {children}
+      </div>
     </>
   );
 };

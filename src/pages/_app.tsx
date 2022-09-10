@@ -1,3 +1,4 @@
+import PageNProgress from "next-styled-nprogress";
 import type { AppProps } from "next/app";
 import { SnackbarProvider } from "notistack";
 import { AdditionalInformation } from "../Components/AdditionalInformation";
@@ -12,6 +13,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <SnackbarProvider maxSnack={3}>
         <BackdropProvider>
+          <PageNProgress
+            color="#fff"
+            showSpinner={false}
+            height="5px"
+            delay={200}
+          />
           <Navbar />
           <Component {...pageProps} />
           <AdditionalInformation />
