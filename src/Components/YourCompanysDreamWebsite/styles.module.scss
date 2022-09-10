@@ -1,0 +1,36 @@
+.container {
+  padding: 50px 0;
+  background: #199ada;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    p {
+      text-align: justify;
+      color: #fff;
+    }
+  }
+
+  svg {
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+    justify-self: center;
+  }
+}

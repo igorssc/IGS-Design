@@ -1,5 +1,11 @@
 .container {
-  background: #199ada;
+  &.primary {
+    background: #199ada;
+  }
+
+  &.secondary {
+    background: #fff;
+  }
 }
 
 .content {
