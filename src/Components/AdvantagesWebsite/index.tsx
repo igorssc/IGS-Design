@@ -4,8 +4,8 @@ import {
   ThumbsUp,
   Wrench,
 } from "phosphor-react";
-import { Container } from "../Components/Container";
-import { Title } from "../Components/Title";
+import { Container } from "../Container";
+import { Title } from "../Title";
 import styles from "./styles.module.scss";
 
 const advantages = [
