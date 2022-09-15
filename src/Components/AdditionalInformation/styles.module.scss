@@ -22,7 +22,14 @@
     ul {
       margin-top: 30px;
       list-style: none;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        position: relative;
+        z-index: 10;
+      }
 
       li:last-child {
         font-weight: bold;
@@ -37,6 +44,14 @@
       margin-top: 30px;
       list-style: none;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        position: relative;
+        z-index: 10;
+      }
 
       .icons {
         margin-top: 40px;
@@ -67,6 +82,12 @@
           margin: auto;
           border: 1px solid transparent;
           cursor: pointer;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
 
           &:hover {
             background: #fff;
