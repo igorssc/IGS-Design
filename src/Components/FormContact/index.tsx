@@ -105,7 +105,7 @@ export const FormContact = () => {
     <>
       <Container>
         <div className={styles.content}>
-          <Title scheme="secondary">Fale conosco</Title>
+          <Title>Fale conosco</Title>
           <form
             className={styles.form}
             onSubmit={(e) => {
