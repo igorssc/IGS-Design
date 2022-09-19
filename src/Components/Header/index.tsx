@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import AstronautImg from "../../../public/creative-astronaut-kid-character.svg";
+import AstronautImg from "../../../public/creative-astronaut-kid-character2.svg";
 import LogoImg from "../../../public/logo-igs-design.svg";
 import { BackgroundSky } from "../BackgroundSky";
 import { Container } from "../Container";

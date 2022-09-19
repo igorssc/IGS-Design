@@ -45,6 +45,11 @@
       width: 70px;
       height: 70px;
       border-radius: 100%;
+      filter: grayscale(1);
+
+      &:hover {
+        filter: none;
+      }
 
       @media (min-width: 640px) {
         width: 100px;

@@ -35,10 +35,7 @@ export const BoxInformation = ({
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={_image.src} alt="Website image" />
                 ) : (
-                  <>
-                    {console.log("aqui")}
-                    <_image />
-                  </>
+                  <_image />
                 )}
               </>
             )}
