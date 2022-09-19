@@ -9,7 +9,7 @@ import styles from "./styles.module.scss";
 export const Header = () => {
   return (
     <>
-      <BackgroundSky type="quinary" fixed>
+      <BackgroundSky type="quinary">
         <div className={styles.container}>
           <Container>
             <div className={styles.content}>
