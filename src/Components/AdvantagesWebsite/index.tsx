@@ -34,17 +34,20 @@ const advantages = [
 export const AdvantagesWebsite = () => {
   return (
     <>
-      <Container>
-        <div className={styles.content}>
-          {advantages.map(([_icon, title, description], index) => (
-            <div key={index}>
-              <_icon size={40} />
-              <Title _as="h3">{title as string}</Title>
-              <p>{description as string}</p>
-            </div>
-          ))}
-        </div>
-      </Container>
+      <div className={styles.container}>
+        <Container>
+          <Title _as="h2">Vantagens em construir seu website com a IGS</Title>
+          <div className={styles.content}>
+            {advantages.map(([_icon, title, description], index) => (
+              <div key={index}>
+                <_icon size={40} />
+                <Title _as="h3">{title as string}</Title>
+                <p>{description as string}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </div>
     </>
   );
 };

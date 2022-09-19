@@ -1,8 +1,5 @@
 import "photoswipe/dist/photoswipe.css";
 
-import { Container } from "../Container";
-import { Gallery } from "../Gallery";
-// import { Gallery } from '../Galery'
 import portfolio2Img from "../../../public/portfolio/banner-daiana-despachante.jpeg";
 import portfolioSite2Img from "../../../public/portfolio/capture-nasdacash.png";
 import portfolioSite1Img from "../../../public/portfolio/capture-slfretamento.png";
@@ -10,10 +7,11 @@ import portfolio4Img from "../../../public/portfolio/cardapio-lanche-legal.jpeg"
 import portfolio1Img from "../../../public/portfolio/cartao-de-visita-crislaine-costa-advogada.jpeg";
 import portfolio5Img from "../../../public/portfolio/cartao-de-visita-oficina-3-irmaos.jpeg";
 import portfolio7Img from "../../../public/portfolio/cartao-de-visita-somatorio-nucleo-de-ensino.jpeg";
-import portfolio3Img from "../../../public/portfolio/convite-musical-sesi.jpeg";
-import portfolio6Img from "../../../public/portfolio/panfleto-master-vans.jpeg";
+import portfolio6Img from "../../../public/portfolio/panfleto-deposito-via-colegio.jpeg";
+import portfolio3Img from "../../../public/portfolio/panfleto-master-vans.jpeg";
 import portfolio8Img from "../../../public/portfolio/panfleto-promocao-de-natal-opticas-imperador.jpeg";
-
+import { Container } from "../Container";
+import { Gallery } from "../Gallery";
 import { OurSites } from "../OurSites";
 import { Title } from "../Title";
 import styles from "./styles.module.scss";

@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import DevelopersCreatingImg from "../../../public/creative-astronaut-kid-character.svg";
+import AstronautImg from "../../../public/creative-astronaut-kid-character.svg";
 import LogoImg from "../../../public/logo-igs-design.svg";
 import { BackgroundSky } from "../BackgroundSky";
 import { Container } from "../Container";
@@ -9,7 +9,7 @@ import styles from "./styles.module.scss";
 export const Header = () => {
   return (
     <>
-      <BackgroundSky type="quinary">
+      <BackgroundSky type="quinary" fixed>
         <div className={styles.container}>
           <Container>
             <div className={styles.content}>
@@ -37,7 +37,7 @@ export const Header = () => {
                   cliente
                 </p>
               </div>
-              <DevelopersCreatingImg className={styles.image} />
+              <AstronautImg className={styles.image} />
             </div>
           </Container>
         </div>

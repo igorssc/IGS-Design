@@ -1,9 +1,9 @@
 import { CaretLeft, CaretRight, Quotes } from "phosphor-react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import evaluationPhoto4Img from "../../../public/clients/cervejeiras-futebol-clube.jpg";
 import evaluationPhoto1Img from "../../../public/clients/elenice-domingos.jpg";
 import evaluationPhoto3Img from "../../../public/clients/josimeire-dias.jpg";
+import evaluationPhoto4Img from "../../../public/clients/stephany-duarte.jpg";
 import evaluationPhoto2Img from "../../../public/clients/tm-ensaios.jpg";
 import { Container } from "../Container";
 import { Title } from "../Title";
@@ -30,9 +30,9 @@ export const OurClients = () => {
       image: evaluationPhoto3Img,
     },
     {
-      name: "Cervejeiras Futebol Clube",
+      name: "Stephany Duarte",
       evaluation:
-        "IGS design, fez a diferença em nosso time, nos proporcionou um lindo brasão, super sofisticado e elogiado por todos onde passamos. Trabalho de qualidade e com muita eficiência. Obrigada.",
+        "A IGS Design se mostrou uma parceira valiosa! Atendimento sempre muito prático e atencioso, oportunidade de acompanhar o processo a medida que é executado e sempre com agilidade! Muito grata pelos serviços, indico para todos!",
       image: evaluationPhoto4Img,
     },
   ];

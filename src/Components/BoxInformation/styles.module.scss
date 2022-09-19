@@ -1,6 +1,10 @@
 .container {
   padding: 50px 0;
-  background: #199ada;
+
+  &.secondary {
+    background: #199ada;
+    color: #fff;
+  }
 }
 
 .content {
@@ -8,12 +12,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
   gap: 2rem;
+  padding: 50px 0;
 
   @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    &.containsImage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   > div {
@@ -23,14 +29,19 @@
 
     p {
       text-align: justify;
-      color: #fff;
     }
   }
 
+  img,
   svg {
     width: 400px;
     height: auto;
     max-width: 100%;
     justify-self: center;
+    order: 0;
+  }
+
+  .invert {
+    order: -1;
   }
 }
