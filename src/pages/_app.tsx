@@ -1,6 +1,9 @@
 import PageNProgress from "next-styled-nprogress";
 import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
 import { SnackbarProvider } from "notistack";
+import { useEffect } from "react";
+import ReactGA from "react-ga";
 import { AdditionalInformation } from "../Components/AdditionalInformation";
 import { ButtonScrollTop } from "../Components/ButtonScrollTop";
 import { Footer } from "../Components/Footer";
@@ -9,6 +12,15 @@ import { BackdropProvider } from "../hooks/useBackdrop";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const TRACKING_ID = "G-D4MB103KR2";
+  ReactGA.initialize(TRACKING_ID);
+
+  const { pathname } = useRouter();
+
+  useEffect(() => {
+    ReactGA.pageview(pathname);
+  }, [pathname]);
+
   return (
     <>
       <SnackbarProvider maxSnack={3}>
