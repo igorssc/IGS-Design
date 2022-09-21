@@ -5,7 +5,6 @@ import NextDocument, {
   Main,
   NextScript,
 } from "next/document";
-import coverImg from "../../public/cover.jpg";
 
 class Document extends NextDocument {
   static async getInitialProps(context: DocumentContext) {
@@ -15,7 +14,8 @@ class Document extends NextDocument {
 
   render() {
     const pageTitle = "IGS Design";
-    const pageImage = coverImg.src;
+    const pageImage =
+      "https://user-images.githubusercontent.com/26682297/191368584-c36a95f6-f4d1-428c-8014-c22f89fae56a.jpg";
     const description =
       "A IGS Design oferece vários serviços como criação de logotipos, cartões de visita, panfletos, banners, flyers, e convites. Oferecemos também serviços para plataformas online, como criação de sites, blogs e muito mais.";
 
