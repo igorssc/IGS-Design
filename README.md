@@ -76,7 +76,7 @@ You can now access [`localhost:3000`](http://localhost:3000) from your browser.
 
 Access <https://www.igsdesign.com.br>
 
-## 📝 Licence
+## 📝 License
 
 This project is under MIT licence. See the archive [LICENSE](LICENSE.md) to more details.
 
