@@ -1,9 +1,9 @@
+import { Banner } from "@/Components/Banner";
+import { Clouds } from "@/Components/Clouds";
+import { FormContact } from "@/Components/FormContact";
+import { Title } from "@/Components/Title";
 import { NextPage } from "next";
 import Head from "next/head";
-import { Banner } from "../Components/Banner";
-import { Clouds } from "../Components/Clouds";
-import { FormContact } from "../Components/FormContact";
-import { Title } from "../Components/Title";
 
 const FaleConosco: NextPage = () => {
   return (

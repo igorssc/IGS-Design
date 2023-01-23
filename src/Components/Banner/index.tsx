@@ -27,9 +27,8 @@ export const Banner = ({
             {children}
             <div className={styles.buttons}>
               {button?.map(({ href, text }) => (
-                <Link href={href} key={href} passHref>
+                <Link href={href} key={href}>
                   <Button
-                    _as="a"
                     scheme={scheme === "primary" ? "secondary" : "primary"}
                   >
                     {text}

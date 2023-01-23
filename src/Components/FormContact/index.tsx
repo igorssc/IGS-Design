@@ -1,6 +1,5 @@
 import { useSnackbar } from "notistack";
 import { useState } from "react";
-import ReactGA from "react-ga";
 import { useBackdrop } from "../../hooks/useBackdrop";
 import { maskPhone } from "../../utils/mask";
 import { Button } from "../Button";
@@ -77,12 +76,6 @@ export const FormContact = () => {
     }
 
     handleOpenBackdrop();
-
-    ReactGA.event({
-      category: "Contato",
-      action: "Envio de e-mail",
-      label: "Envio de e-mail",
-    });
 
     try {
       const response = await fetch("/api/email", {

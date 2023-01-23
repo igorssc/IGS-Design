@@ -1,6 +1,6 @@
+import AstronautImg from "@/assets/creative-astronaut-kid-character.svg";
+import LogoImg from "@/assets/logo-igs-design.svg";
 import { TypeAnimation } from "react-type-animation";
-import AstronautImg from "../../../public/creative-astronaut-kid-character2.svg";
-import LogoImg from "../../../public/logo-igs-design.svg";
 import { BackgroundSky } from "../BackgroundSky";
 import { Container } from "../Container";
 import { Title } from "../Title";
@@ -9,7 +9,7 @@ import styles from "./styles.module.scss";
 export const Header = () => {
   return (
     <>
-      <BackgroundSky type="quinary">
+      <BackgroundSky type="secondary">
         <div className={styles.container}>
           <Container>
             <div className={styles.content}>
@@ -30,11 +30,11 @@ export const Header = () => {
                   />
                 </Title>
                 <p>
-                  A IGS Design é uma empresa de Marketing Digital e Impresso.
-                  Atendemos tanto a pessoas físicas quanto jurídicas, e inovamos
-                  com o conceito de “revisões ilimitadas”. Ou seja, o
-                  desenvolvimento da arte só é finalizado mediante aprovação do
-                  cliente
+                  Bem-vindo à IGS Design, onde criatividade e inovação são nossa
+                  paixão. Oferecemos soluções personalizadas em desenvolvimento
+                  gráfico e de software. Entre em contato conosco hoje para
+                  discutir como podemos ajudá-lo a alcançar seus objetivos e dar
+                  vida à sua visão. Estamos ansiosos para trabalhar com você!
                 </p>
               </div>
               <AstronautImg className={styles.image} />

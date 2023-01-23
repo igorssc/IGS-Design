@@ -1,7 +1,7 @@
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
+import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
-import { LegacyRef } from "react";
-import { Gallery as GaleryPhotoswipe, Item } from "react-photoswipe-gallery";
+import { createRef, useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
 interface GalleryProps {
@@ -12,30 +12,64 @@ interface GalleryProps {
 }
 
 export const Gallery = ({ items }: GalleryProps) => {
+  const ref = createRef<HTMLDivElement>();
+  const [dimensionItem, setDimensionItem] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    let lightbox = new PhotoSwipeLightbox({
+      gallery: "#" + "gallery",
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+    });
+    lightbox.init();
+
+    return () => {
+      lightbox.destroy();
+      // @ts-ignore:next-line
+      lightbox = null;
+    };
+  }, []);
+
+  const handleWindowResize = () => {
+    const itemWidth =
+      document.querySelector("#gallery")?.children[0]?.clientWidth;
+
+    setDimensionItem({ width: itemWidth || 0, height: (itemWidth || 0) * 0.8 });
+  };
+
+  useEffect(() => {
+    handleWindowResize();
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <>
-      <GaleryPhotoswipe>
-        {items.map((item, key) => (
-          <Item
-            original={item.original.src}
-            thumbnail={item.thumbnail.src}
-            width="1024"
-            height="768"
-            key={key}
+      <div id="gallery" className={styles.gallery} ref={ref}>
+        {items.map((item, index) => (
+          <a
+            href={item.original.src}
+            data-pswp-width={1080}
+            data-pswp-height={864}
+            key={"gallery" + "-" + index}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.item}
+            style={{ height: dimensionItem.height }}
           >
-            {({ ref, open }) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                alt="portfolio"
-                ref={ref as LegacyRef<HTMLImageElement> | undefined}
-                onClick={open}
-                src={item.thumbnail.src}
-                className={styles.item}
-              />
-            )}
-          </Item>
+            <Image
+              src={item.thumbnail.src}
+              alt="gallery item"
+              loading="lazy"
+              fill
+            />
+          </a>
         ))}
-      </GaleryPhotoswipe>
+      </div>
     </>
   );
 };

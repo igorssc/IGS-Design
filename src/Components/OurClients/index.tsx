@@ -1,10 +1,11 @@
+import evaluationPhoto1Img from "@/assets/clients/elenice-domingos.webp";
+import evaluationPhoto3Img from "@/assets/clients/josimeire-dias.webp";
+import evaluationPhoto4Img from "@/assets/clients/stephany-duarte.webp";
+import evaluationPhoto2Img from "@/assets/clients/tm-ensaios.webp";
+import Image from "next/image";
 import { CaretLeft, CaretRight, Quotes } from "phosphor-react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import evaluationPhoto1Img from "../../../public/clients/elenice-domingos.jpg";
-import evaluationPhoto3Img from "../../../public/clients/josimeire-dias.jpg";
-import evaluationPhoto4Img from "../../../public/clients/stephany-duarte.jpg";
-import evaluationPhoto2Img from "../../../public/clients/tm-ensaios.jpg";
 import { Container } from "../Container";
 import { Title } from "../Title";
 import styles from "./styles.module.scss";
@@ -84,8 +85,14 @@ export const OurClients = () => {
               <div className={styles.item} key={client.name}>
                 <Quotes className={styles.icon} />
                 <div className={styles.evaluation}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={client.image.src} alt="photo from client" />
+                  <Image
+                    width={100}
+                    height={100}
+                    loading="lazy"
+                    src={client.image.src}
+                    alt="photo from client"
+                    className={styles.image}
+                  />
                   <Title _as="h3" scheme="secondary">
                     {client.name}
                   </Title>

@@ -11,23 +11,23 @@ import styles from "./styles.module.scss";
 const advantages = [
   [
     DeviceMobile,
-    "Sites Responsivos",
-    "Cada dia mais as pessoas estão conectadas através de diferentes dispositivos. Ter um Site Responsivo é possuir um layout que se adapte a qualquer tamanho de tela (smartphone, tablet, notebook e desktop), garantindo a melhor visualização e acessibilidade ao conteúdo.",
+    "Soluções personalizadas",
+    "A IGS Design oferece soluções de desenvolvimento de site personalizadas para atender às necessidades e objetivos de cada cliente. Nós nos esforçamos para entender as necessidades de nossos clientes para criar um site que atenda perfeitamente às suas necessidades.",
   ],
   [
     Wrench,
-    "Gerenciador de Conteúdo",
-    "Gerencie você mesmo o conteúdo do seu site de forma rápida através de um painel administrativo prático, de fácil navegabilidade. Tenha um site sempre atualizado e ainda diminua os custos com a manutenção de conteúdo",
+    "Equipe altamente qualificada",
+    "A equipe da IGS Design é altamente qualificada e experiente, garantindo que seu site seja desenvolvido com precisão e profissionalismo. Nós temos a experiência e habilidades para ajudá-lo a alcançar seus objetivos.",
   ],
   [
     ShoppingCartSimple,
-    "Lojas Virtuais",
-    "Tenha sua loja virtual aberta 24 horas por dia 7 dias da semana. Crie a sua loja virtual e faça negócios pela internet com facilidade e praticidade para seus clientes e menor custo para sua empresa",
+    "Atendimento exclusivo",
+    "A IGS Design oferece um atendimento exclusivo para garantir que seus clientes tenham a melhor experiência possível. Nós trabalhamos de perto com nossos clientes para garantir que eles tenham o site dos sonhos.",
   ],
   [
     ThumbsUp,
-    "Recursos extras",
-    "A IGS deixa a disposição do cliente a escolha de alguns recursos, como a implementação de atalhos de Redes Socias e Localização da Sede pelo Google Maps. Fica a disposição do cliente também o email marketing",
+    "Recursos avançados",
+    "A IGS Design oferece recursos avançados, como integração com redes sociais, SEO otimizado, gerenciamento de estoque e outros para garantir que seu site seja o mais eficaz possível. Nós oferecemos uma ampla variedade de recursos extras para nossos clientes para garantir que suas necessidades sejam atendidas e seus objetivos sejam alcançados.",
   ],
 ];
 
@@ -36,7 +36,7 @@ export const AdvantagesWebsite = () => {
     <>
       <div className={styles.container}>
         <Container>
-          <Title _as="h2">Vantagens em construir seu website com a IGS</Title>
+          <Title _as="h2">Vantagens em construir seu site com a IGS</Title>
           <div className={styles.content}>
             {advantages.map(([_icon, title, description], index) => (
               <div key={index}>

@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Button } from "../Button";
 import { Title } from "../Title";
 import styles from "./styles.module.scss";
@@ -20,8 +20,14 @@ export const OurSites = ({ items }: OurSitesProps) => {
       <div className={styles.content}>
         {items.map((item, index) => (
           <div className={styles.site} key={index}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={item.image.src} alt={item.name} />
+            <Image
+              loading="lazy"
+              width={800}
+              height={800}
+              src={item.image.src}
+              alt={item.name}
+              className={styles.image}
+            />
             <Title _as="h3" scheme="secondary">
               {item.name}
             </Title>

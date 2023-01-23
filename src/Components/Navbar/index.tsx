@@ -1,8 +1,8 @@
+import LogoImg from "@/assets/logo-igs-design.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { List, X } from "phosphor-react";
 import { useEffect, useState } from "react";
-import LogoImg from "../../../public/logo-igs-design.svg";
 import { Container } from "../Container";
 import styles from "./styles.module.scss";
 
@@ -17,11 +17,11 @@ const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const { pathname } = useRouter();
+  const router = useRouter();
 
   useEffect(() => {
     setIsOpen(false);
-  }, [pathname]);
+  }, [router?.pathname]);
 
   useEffect(() => {
     document.getElementsByTagName("html")[0].style.overflowY = !isOpen
@@ -46,7 +46,7 @@ const Navbar = () => {
                 {pages.map(([page, link]) => (
                   <li
                     key={link}
-                    className={pathname === link ? styles.active : ""}
+                    className={router?.pathname === link ? styles.active : ""}
                   >
                     <Link href={link}>{page}</Link>
                   </li>

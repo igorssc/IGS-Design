@@ -1,23 +1,23 @@
 import "photoswipe/dist/photoswipe.css";
 
-import portfolio2Img from "../../../public/portfolio/banner-daiana-despachante.jpeg";
-import portfolio2ImgThumb from "../../../public/portfolio/banner-daiana-despachante.jpg";
-import portfolioSite2Img from "../../../public/portfolio/capture-nasdacash.png";
-import portfolioSite1Img from "../../../public/portfolio/capture-slfretamento.png";
-import portfolio4Img from "../../../public/portfolio/cardapio-lanche-legal.jpeg";
-import portfolio4ImgThumb from "../../../public/portfolio/cardapio-lanche-legal.jpg";
-import portfolio1Img from "../../../public/portfolio/cartao-de-visita-crislaine-costa-advogada.jpeg";
-import portfolio1ImgThumb from "../../../public/portfolio/cartao-de-visita-crislaine-costa-advogada.jpg";
-import portfolio5Img from "../../../public/portfolio/cartao-de-visita-oficina-3-irmaos.jpeg";
-import portfolio5ImgThumb from "../../../public/portfolio/cartao-de-visita-oficina-3-irmaos.jpg";
-import portfolio7Img from "../../../public/portfolio/cartao-de-visita-somatorio-nucleo-de-ensino.jpeg";
-import portfolio7ImgThumb from "../../../public/portfolio/cartao-de-visita-somatorio-nucleo-de-ensino.jpg";
-import portfolio6Img from "../../../public/portfolio/panfleto-deposito-via-colegio.jpeg";
-import portfolio6ImgThumb from "../../../public/portfolio/panfleto-deposito-via-colegio.jpg";
-import portfolio3Img from "../../../public/portfolio/panfleto-master-vans.jpeg";
-import portfolio3ImgThumb from "../../../public/portfolio/panfleto-master-vans.jpg";
-import portfolio8Img from "../../../public/portfolio/panfleto-promocao-de-natal-opticas-imperador.jpeg";
-import portfolio8ImgThumb from "../../../public/portfolio/panfleto-promocao-de-natal-opticas-imperador.jpg";
+import portfolio2ImgThumb from "@/assets/portfolio/banner-daiana-despachante-thumb.webp";
+import portfolio2Img from "@/assets/portfolio/banner-daiana-despachante.webp";
+import portfolioSite2Img from "@/assets/portfolio/capture-nasdacash.webp";
+import portfolioSite1Img from "@/assets/portfolio/capture-slfretamento.webp";
+import portfolio4ImgThumb from "@/assets/portfolio/cardapio-lanche-legal-thumb.webp";
+import portfolio4Img from "@/assets/portfolio/cardapio-lanche-legal.webp";
+import portfolio1ImgThumb from "@/assets/portfolio/cartao-de-visita-crislaine-costa-advogada-thumb.webp";
+import portfolio1Img from "@/assets/portfolio/cartao-de-visita-crislaine-costa-advogada.webp";
+import portfolio5ImgThumb from "@/assets/portfolio/cartao-de-visita-oficina-3-irmaos-thumb.webp";
+import portfolio5Img from "@/assets/portfolio/cartao-de-visita-oficina-3-irmaos.webp";
+import portfolio7ImgThumb from "@/assets/portfolio/cartao-de-visita-somatorio-nucleo-de-ensino-thumb.webp";
+import portfolio7Img from "@/assets/portfolio/cartao-de-visita-somatorio-nucleo-de-ensino.webp";
+import portfolio6ImgThumb from "@/assets/portfolio/panfleto-deposito-via-colegio-thumb.webp";
+import portfolio6Img from "@/assets/portfolio/panfleto-deposito-via-colegio.webp";
+import portfolio3ImgThumb from "@/assets/portfolio/panfleto-master-vans-thumb.webp";
+import portfolio3Img from "@/assets/portfolio/panfleto-master-vans.webp";
+import portfolio8ImgThumb from "@/assets/portfolio/panfleto-promocao-de-natal-opticas-imperador-thumb.webp";
+import portfolio8Img from "@/assets/portfolio/panfleto-promocao-de-natal-opticas-imperador.webp";
 import { Container } from "../Container";
 import { Gallery } from "../Gallery";
 import { OurSites } from "../OurSites";
@@ -78,9 +78,7 @@ export const Portfolio = () => {
       <Container>
         <div className={styles.content}>
           <Title scheme="secondary">Nosso portfólio</Title>
-          <div className={styles.gallery}>
-            <Gallery items={items} />
-          </div>
+          <Gallery items={items} />
 
           <OurSites items={sites} />
         </div>

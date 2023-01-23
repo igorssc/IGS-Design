@@ -1,18 +1,9 @@
 .container {
   &.primary {
-    background-image: url(../../../public/sky.jpg);
+    background-image: url(../../assets/sky.webp);
   }
   &.secondary {
-    background-image: url(../../../public/sky_2.jpg);
-  }
-  &.tertiary {
-    background-image: url(../../../public/sky_3.jpg);
-  }
-  &.quaternary {
-    background-image: url(../../../public/sky_4.jpg);
-  }
-  &.quinary {
-    background-image: url(../../../public/space.jpg);
+    background-image: url(../../assets/space.webp);
   }
   background-repeat: no-repeat;
   background-size: cover;

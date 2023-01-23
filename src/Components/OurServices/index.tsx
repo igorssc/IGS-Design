@@ -43,9 +43,7 @@ export const OurServices = () => {
                     </Title>
                     <p>{description}</p>
                     <Link href={link}>
-                      <Button _as="a" href={link}>
-                        Saiba mais
-                      </Button>
+                      <Button>Saiba mais</Button>
                     </Link>
                   </div>
                 ))}

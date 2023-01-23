@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 import { Container } from "../Container";
 import { Title } from "../Title";
@@ -19,6 +19,8 @@ export const BoxInformation = ({
   invert,
   scheme = "primary",
 }: BoxInformationProps) => {
+  console.log(_image);
+
   return (
     <>
       <div className={`${styles.container} ${styles[scheme]}`}>
@@ -32,8 +34,13 @@ export const BoxInformation = ({
             {_image && (
               <>
                 {_image.src ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={_image.src} alt="Website image" />
+                  <Image
+                    width={800}
+                    height={800}
+                    loading="lazy"
+                    src={_image.src}
+                    alt="Website image"
+                  />
                 ) : (
                   <_image />
                 )}

@@ -1,10 +1,10 @@
+import BrainstormingImg from "@/assets/brainstorming.svg";
+import Brainstorming2Img from "@/assets/brainstorming_2.svg";
+import { Banner } from "@/Components/Banner";
+import { BoxInformation } from "@/Components/BoxInformation";
+import { Title } from "@/Components/Title";
 import { NextPage } from "next";
 import Head from "next/head";
-import BrainstormingImg from "../../public/brainstorming.svg";
-import Brainstorming2Img from "../../public/brainstorming_2.svg";
-import { Banner } from "../Components/Banner";
-import { BoxInformation } from "../Components/BoxInformation";
-import { Title } from "../Components/Title";
 
 const DesignGrafico: NextPage = () => {
   return (

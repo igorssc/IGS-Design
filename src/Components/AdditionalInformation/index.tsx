@@ -10,24 +10,16 @@ export const AdditionalInformation = () => {
       <Container>
         <div className={styles.content}>
           <div>
-            <div
-              className={`${styles.facebookPage} fb-page`}
-              data-href="https://www.facebook.com/design.igs"
-              data-tabs="timeline"
-              data-width=""
-              data-height=""
-              data-small-header="false"
-              data-adapt-container-width="true"
-              data-hide-cover="false"
-              data-show-facepile="true"
-            >
-              <blockquote
-                cite="https://www.facebook.com/design.igs"
-                className="fb-xfbml-parse-ignore"
-              >
-                <a href="https://www.facebook.com/design.igs">IGS Design</a>
-              </blockquote>
-            </div>
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdesign.igs&tabs=timeline&width=340&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=909705613246103"
+              width="340"
+              height="331"
+              style={{ border: "none", overflow: "hidden" }}
+              scrolling="no"
+              frameBorder={0}
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
           </div>
           <div className={styles.ourServices}>
             <Title _as="h3">Nossos serviços</Title>
@@ -51,24 +43,24 @@ export const AdditionalInformation = () => {
               <li>(31) 99318-5969</li>
               <li className={styles.icons}>
                 <span>
-                  <Link href="mailto:contato@igsdesign.com" passHref>
-                    <a target="_blank">
-                      <At size={32} />
-                    </a>
+                  <Link href="mailto:contato@igsdesign.com" target="_blank">
+                    <At size={32} />
                   </Link>
                 </span>
                 <span>
-                  <Link href="https://www.facebook.com/design.igs" passHref>
-                    <a target="_blank">
-                      <FacebookLogo size={32} />
-                    </a>
+                  <Link
+                    href="https://www.facebook.com/design.igs"
+                    target="_blank"
+                  >
+                    <FacebookLogo size={32} />
                   </Link>
                 </span>
                 <span>
-                  <Link href="https://www.instagram.com/igs_design" passHref>
-                    <a target="_blank">
-                      <InstagramLogo size={32} />
-                    </a>
+                  <Link
+                    href="https://www.instagram.com/igs_design"
+                    target="_blank"
+                  >
+                    <InstagramLogo size={32} />
                   </Link>
                 </span>
               </li>

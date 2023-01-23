@@ -1,13 +1,32 @@
+.gallery {
+  display: grid;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+
+  // xl
+  @media (min-width: 1280px) {
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .item {
+  display: flex;
+  position: relative;
   border-radius: 3px;
   transition: all 0.2;
   cursor: pointer;
   border: 3px solid #fff;
   -webkit-box-shadow: 3px 3px 15px -7px rgba(0, 0, 0, 0.54);
   box-shadow: 3px 3px 15px -7px rgba(0, 0, 0, 0.54);
-  border-radius: 6px;
   margin: auto;
-  max-width: 100%;
+  width: 100%;
+
+  @media (min-width: 1280px) {
+    border-radius: 4px;
+  }
 
   &:hover {
     transform: scale(1.02);

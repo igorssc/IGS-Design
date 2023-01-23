@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import styles from "./styles.module.scss";
 
 interface BackgroundSkyProps {
-  type?: "primary" | "secondary" | "tertiary" | "quaternary" | "quinary";
+  type?: "primary" | "secondary";
   fixed?: boolean;
   children: ReactNode;
 }

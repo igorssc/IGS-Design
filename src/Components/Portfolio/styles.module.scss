@@ -8,17 +8,4 @@
   @media (min-width: 1024px) {
     padding-bottom: 100px;
   }
-
-  .gallery {
-    display: grid;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-
-    // xl
-    @media (min-width: 1280px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
 }
