@@ -14,7 +14,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <SnackbarProvider maxSnack={3}>
       <BackdropProvider>
-        <PageNProgress color="#fff" showSpinner={false} height="2px" />
+        <PageNProgress
+          color="#fff"
+          showSpinner={false}
+          height="4px"
+          delay={200}
+        />
         <Navbar />
         <PageTransition timeout={300} classNames="page-transition">
           <Component {...pageProps} />
