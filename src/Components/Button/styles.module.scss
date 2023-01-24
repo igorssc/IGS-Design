@@ -1,6 +1,5 @@
 .container {
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 
 .button {
@@ -14,6 +13,7 @@
   cursor: pointer;
   position: relative;
   z-index: 50;
+  margin: auto;
 
   @media (min-width: 640px) {
     width: 300px;

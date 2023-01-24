@@ -2,6 +2,7 @@
   transition: all 0.3s;
   position: relative;
   margin-top: 20px;
+  z-index: 10;
 
   * {
     background: url(../../assets/clouds.svg);

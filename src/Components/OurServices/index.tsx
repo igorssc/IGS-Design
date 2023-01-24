@@ -42,7 +42,7 @@ export const OurServices = () => {
                       {title}
                     </Title>
                     <p>{description}</p>
-                    <Link href={link}>
+                    <Link href={link} style={{ width: "100%" }}>
                       <Button>Saiba mais</Button>
                     </Link>
                   </div>
