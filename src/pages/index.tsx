@@ -9,15 +9,9 @@ import { Title } from "@/Components/Title";
 import styles from "@/styles/Home.module.scss";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useEffect } from "react";
-import ReactGA from "react-ga";
 import Fade from "react-reveal/Fade";
 
 const Home: NextPage = () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
   return (
     <>
       <Head>

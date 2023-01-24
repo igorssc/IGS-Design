@@ -1,3 +1,4 @@
+import { Analytics } from "@/Components/Analytics";
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -63,6 +64,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     );

@@ -8,11 +8,8 @@ import "@/styles/globals.scss";
 import PageNProgress from "next-styled-nprogress";
 import type { AppProps } from "next/app";
 import { SnackbarProvider } from "notistack";
-import ReactGA from "react-ga";
 
 export default function App({ Component, pageProps }: AppProps) {
-  ReactGA.initialize("G-D4MB103KR2");
-
   return (
     <SnackbarProvider maxSnack={3}>
       <BackdropProvider>
