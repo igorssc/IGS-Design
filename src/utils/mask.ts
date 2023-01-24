@@ -21,10 +21,10 @@ export const maskPhone = (value: string) => {
     );
   } else if (length > 2) {
     currentValue = currentValue.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
-  } else if (length === 0 && value.length === 1) {
-    currentValue = "";
-  } else {
+  } else if (length > 0) {
     currentValue = currentValue.replace(/^(\d*)/, "($1");
+  } else if (length === 0 && value.length === 1 && value === "(") {
+    currentValue = "";
   }
 
   return currentValue;

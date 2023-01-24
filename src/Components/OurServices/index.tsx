@@ -35,8 +35,8 @@ export const OurServices = () => {
               <Title scheme="secondary">Nossos serviços</Title>
               <div>
                 {services.map(({ title, _icon, description, link }, index) => (
-                  <div key={index}>
-                    <Fade left={index === 0} right={index > 0}>
+                  <Fade left={index === 0} right={index > 0} key={index}>
+                    <div>
                       <div className={styles.icon}>
                         <_icon size={40} />
                       </div>
@@ -47,8 +47,8 @@ export const OurServices = () => {
                       <Link href={link} style={{ width: "100%" }}>
                         <Button>Saiba mais</Button>
                       </Link>
-                    </Fade>
-                  </div>
+                    </div>
+                  </Fade>
                 ))}
               </div>
             </div>

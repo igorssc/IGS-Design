@@ -1,5 +1,6 @@
+import { maskPhone } from "@/utils/mask";
 import { useSnackbar } from "notistack";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useBackdrop } from "../../hooks/useBackdrop";
 import { Button } from "../Button";
 import { Container } from "../Container";
@@ -103,6 +104,10 @@ export const FormContact = () => {
     }
   };
 
+  useEffect(() => {
+    setPhoneValue((prev) => maskPhone(prev));
+  }, [phoneValue]);
+
   return (
     <>
       <Container>
@@ -131,10 +136,9 @@ export const FormContact = () => {
             </div>
             <div>
               <Input
-                title="E-mail"
+                title="Telefone"
                 value={phoneValue}
                 setValue={setPhoneValue}
-                type="phone"
               />
             </div>
             <div>
