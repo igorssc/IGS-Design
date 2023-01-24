@@ -7,7 +7,7 @@ export const About = () => {
     <>
       <Container>
         <div className={styles.content}>
-          <Title>Sobre Nós</Title>
+          <Title _as="h2">Sobre Nós</Title>
           <div>
             <p>
               A IGS Design foi fundada em 2016 com o objetivo de oferecer

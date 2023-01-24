@@ -112,7 +112,7 @@ export const FormContact = () => {
     <>
       <Container>
         <div className={styles.content}>
-          <Title>Fale conosco</Title>
+          <Title _as="h2">Fale conosco</Title>
           <form
             className={styles.form}
             onSubmit={(e) => {

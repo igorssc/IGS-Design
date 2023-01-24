@@ -1,7 +1,8 @@
+import Link from "next/link";
 import { HTMLAttributes, ReactNode } from "react";
 import styles from "./styles.module.scss";
 
-type ButtonProps = HTMLAttributes<HTMLButtonElement> &
+type ButtonProps = HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> &
   ButtonTypeProps & {
     children: ReactNode;
     type?: "button" | "submit" | "reset";
@@ -23,18 +24,30 @@ export const Button = ({
   href,
   target,
   scheme = "primary",
+  ...props
 }: ButtonProps) => {
   return (
     <>
       <div className={styles.container}>
-        <_as
-          className={`${styles.button} ${styles[scheme]}`}
-          type={type}
-          href={href}
-          {...(target && { target })}
-        >
-          {children}
-        </_as>
+        {_as === "a" ? (
+          <Link
+            className={`${styles.button} ${styles[scheme]}`}
+            href={href || "#"}
+            {...props}
+            {...(target && { target })}
+          >
+            {children}
+          </Link>
+        ) : (
+          <_as
+            className={`${styles.button} ${styles[scheme]}`}
+            type={type}
+            {...props}
+            {...(target && { target })}
+          >
+            {children}
+          </_as>
+        )}
       </div>
     </>
   );

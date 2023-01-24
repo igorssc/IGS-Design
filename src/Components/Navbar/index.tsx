@@ -29,42 +29,65 @@ const Navbar = () => {
       : "hidden";
   }, [isOpen]);
 
+  const base = 500;
+
+  const [visibleBorder, setVisibleBorder] = useState(false);
+
+  const onScroll = () => {
+    setVisibleBorder(document.documentElement.scrollTop > base);
+  };
+
+  useEffect(() => {
+    document.addEventListener("scroll", onScroll);
+    return () => document.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       <div className={styles.container}>
-        <Container>
-          <div className={styles.navbar}>
-            <LogoImg className={styles.logo} />
-            <div className={`${styles.navbarItems} ${isOpen && styles.isOpen}`}>
-              <X
+        <div
+          className={`${styles.content} ${
+            visibleBorder && styles.borderVisible
+          }`}
+        >
+          <Container style={{ height: "100%" }}>
+            <div className={styles.navbar}>
+              <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+                <LogoImg className={styles.logo} />
+              </Link>
+              <div
+                className={`${styles.navbarItems} ${isOpen && styles.isOpen}`}
+              >
+                <X
+                  size={32}
+                  color="#ffffff"
+                  className={styles.iconCloseNavbar}
+                  onClick={() => setIsOpen(false)}
+                />
+                <ul>
+                  {pages.map(([page, link]) => (
+                    <li
+                      key={link}
+                      className={router?.pathname === link ? styles.active : ""}
+                    >
+                      <Link href={link}>{page}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <List
                 size={32}
                 color="#ffffff"
-                className={styles.iconCloseNavbar}
+                className={styles.navbarIconMobile}
+                onClick={() => setIsOpen(true)}
+              />
+              <div
+                className={`${styles.backdrop} ${isOpen && styles.isOpen}`}
                 onClick={() => setIsOpen(false)}
               />
-              <ul>
-                {pages.map(([page, link]) => (
-                  <li
-                    key={link}
-                    className={router?.pathname === link ? styles.active : ""}
-                  >
-                    <Link href={link}>{page}</Link>
-                  </li>
-                ))}
-              </ul>
             </div>
-            <List
-              size={32}
-              color="#ffffff"
-              className={styles.navbarIconMobile}
-              onClick={() => setIsOpen(true)}
-            />
-            <div
-              className={`${styles.backdrop} ${isOpen && styles.isOpen}`}
-              onClick={() => setIsOpen(false)}
-            />
-          </div>
-        </Container>
+          </Container>
+        </div>
       </div>
     </>
   );
