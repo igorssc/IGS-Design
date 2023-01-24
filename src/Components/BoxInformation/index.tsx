@@ -19,8 +19,6 @@ export const BoxInformation = ({
   invert,
   scheme = "primary",
 }: BoxInformationProps) => {
-  console.log(_image);
-
   return (
     <>
       <div className={`${styles.container} ${styles[scheme]}`}>

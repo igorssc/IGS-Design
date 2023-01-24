@@ -10,7 +10,9 @@ specifiers:
   '@types/nodemailer': ^6.4.7
   '@types/photoswipe': ^4.1.2
   '@types/react': 18.0.27
+  '@types/react-addons-css-transition-group': ^15.0.7
   '@types/react-dom': 18.0.10
+  '@types/react-transition-group': ^4.4.5
   eslint: 8.32.0
   eslint-config-next: 13.1.4
   next: 13.1.4
@@ -19,8 +21,10 @@ specifiers:
   phosphor-react: ^1.4.1
   photoswipe: ^5.3.4
   react: 18.2.0
+  react-addons-css-transition-group: ^15.6.2
   react-dom: 18.2.0
   react-multi-carousel: ^2.8.2
+  react-transition-group: ^4.4.5
   react-type-animation: ^2.1.2
   sass: ^1.57.1
   typescript: 4.9.4
@@ -38,8 +42,10 @@ dependencies:
   phosphor-react: 1.4.1_react@18.2.0
   photoswipe: 5.3.4
   react: 18.2.0
+  react-addons-css-transition-group: 15.6.2_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
   react-multi-carousel: 2.8.2
+  react-transition-group: 4.4.5_biqbaboplfbrettd7655fr4n2y
   react-type-animation: 2.1.2_biqbaboplfbrettd7655fr4n2y
   sass: 1.57.1
 
@@ -48,7 +54,9 @@ devDependencies:
   '@types/nodemailer': 6.4.7
   '@types/photoswipe': 4.1.2
   '@types/react': 18.0.27
+  '@types/react-addons-css-transition-group': 15.0.7
   '@types/react-dom': 18.0.10
+  '@types/react-transition-group': 4.4.5
   eslint: 8.32.0
   typescript: 4.9.4
 
@@ -2042,6 +2050,19 @@ packages:
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
 
+  /@types/react-addons-css-transition-group/15.0.7:
+    resolution: {integrity: sha512-0TmKgemUTDThscS3apUNyvPvubBW2LC3PztTktXpcPxonxjpzQgS29xcTx/HC3cZYCno4C/pIb1A9Lct9vw7gA==}
+    dependencies:
+      '@types/react': 15.7.12
+      '@types/react-addons-transition-group': 15.0.7
+    dev: true
+
+  /@types/react-addons-transition-group/15.0.7:
+    resolution: {integrity: sha512-Hep6Cwn46A3fGlUoM5PBr6ceynmhsV9xslMns6PQGt3c6mqYaAFvRxueCTjadcRSc0+ulz6QB2toUieVZ1thsg==}
+    dependencies:
+      '@types/react': 15.7.12
+    dev: true
+
   /@types/react-dom/18.0.10:
     resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
     dependencies:
@@ -2058,7 +2079,10 @@ packages:
     resolution: {integrity: sha512-juKD/eiSM3/xZYzjuzH6ZwpP+/lejltmiS3QEzV/vmb/Q8+HfDmxu+Baga8UEMGBqV88Nbg4l2hY/K2DkyaLLA==}
     dependencies:
       '@types/react': 18.0.27
-    dev: false
+
+  /@types/react/15.7.12:
+    resolution: {integrity: sha512-FbIDKxGEzmf0jM+1ArXAJwJzg7GkUq5nLVBIz/PSBwVUzATuAjbPrN+UUEAW6zpt/A2WF8XMfSKsNfGX95xCsQ==}
+    dev: true
 
   /@types/react/18.0.27:
     resolution: {integrity: sha512-3vtRKHgVxu3Jp9t718R9BuzoD4NcQ8YJ5XRzsSKxNDiDonD2MXIT1TmSkenxuCycZJoQT5d2vE8LwWJxBC1gmA==}
@@ -2353,6 +2377,10 @@ packages:
     resolution: {integrity: sha512-bdKU1BQDPeEXe9A39xJnGtY0uRq/z5osrnXUw0TcK+EYno45Y+U7QU9HhHEyzvMDffpYadFXi3idnSNkcwLkTw==}
     dev: false
 
+  /chain-function/1.0.1:
+    resolution: {integrity: sha512-SxltgMwL9uCko5/ZCLiyG2B7R9fY4pDZUw7hJ4MhirdjBLosoDqkWABi3XMucddHdLiFJMb7PD2MZifZriuMTg==}
+    dev: false
+
   /chalk/2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
     engines: {node: '>=4'}
@@ -2570,6 +2598,12 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+
+  /dom-helpers/3.4.0:
+    resolution: {integrity: sha512-LnuPJ+dwqKDIyotW1VzmOZ5TONUN7CwkCR5hrgawTUbkBGYdeoNLZo6nNfGkCrjtE1nXXaj7iMMpDa8/d9WoIA==}
+    dependencies:
+      '@babel/runtime': 7.20.13
+    dev: false
 
   /dom-helpers/5.2.1:
     resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
@@ -3907,6 +3941,17 @@ packages:
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
+  /react-addons-css-transition-group/15.6.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-M5AJydHOUGq+YujoQLL8f9mQ0QLqxjqHUpWyvUmWVCYi93iGz53HwNBwzHbr0u21KABoPzyLYZZgMk974uPovw==}
+    peerDependencies:
+      react: ^15.4.2
+    dependencies:
+      react: 18.2.0
+      react-transition-group: 1.2.1_biqbaboplfbrettd7655fr4n2y
+    transitivePeerDependencies:
+      - react-dom
+    dev: false
+
   /react-dom/18.2.0_react@18.2.0:
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
@@ -3928,6 +3973,21 @@ packages:
   /react-multi-carousel/2.8.2:
     resolution: {integrity: sha512-M9Y7DfAp8bA/r6yexttU6RLA7uyppje4c0ELRuCHZWswH+u7nr0uVP6qHNPjc4XGOEY1MYFOb5nBg7JvoKutuQ==}
     engines: {node: '>=8'}
+    dev: false
+
+  /react-transition-group/1.2.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-CWaL3laCmgAFdxdKbhhps+c0HRGF4c+hdM4H23+FI1QBNUyx/AMeIJGWorehPNSaKnQNOAxL7PQmqMu78CDj3Q==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0
+      react-dom: ^15.0.0 || ^16.0.0
+    dependencies:
+      chain-function: 1.0.1
+      dom-helpers: 3.4.0
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      warning: 3.0.0
     dev: false
 
   /react-transition-group/4.4.5_biqbaboplfbrettd7655fr4n2y:
@@ -4388,6 +4448,12 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.0
+
+  /warning/3.0.0:
+    resolution: {integrity: sha512-jMBt6pUrKn5I+OGgtQ4YZLdhIeJmObddh6CsibPxyQ5yPZm1XExSyzC1LCNX7BzhxWgiHmizBWJTHJIjMjTQYQ==}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
 
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}

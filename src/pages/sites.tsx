@@ -28,7 +28,7 @@ const Sites: NextPage = () => {
         <p>
           Um site bem projetado e desenvolvido pode ser usado para mostrar sua
           expertise e autoridade no seu setor, além de fornecer informações
-          valiosas e contato fácil para seus clientes.{" "}
+          valiosas e contato fácil para seus clientes.
         </p>
         <p>
           Além disso, ter um site otimizado para mecanismos de busca pode ajudar
@@ -36,7 +36,6 @@ const Sites: NextPage = () => {
           aumentar a visibilidade e o tráfego do site.
         </p>
         <p>
-          {" "}
           A IGS Design pode ajudá-lo a criar um site atrativo e funcional que
           irá impulsionar seu negócio para o próximo nível.
         </p>
@@ -113,29 +112,39 @@ const Sites: NextPage = () => {
 
         <ul>
           <li>
-            Email personalizado: nós oferecemos a configuração de contas de
-            email personalizadas com seu domínio, o que dá uma aparência mais
-            profissional e confiável para sua empresa.
+            <p>
+              Email personalizado: nós oferecemos a configuração de contas de
+              email personalizadas com seu domínio, o que dá uma aparência mais
+              profissional e confiável para sua empresa.
+            </p>
           </li>
           <li>
-            Integração com Google Maps: isso permite que os usuários vejam a
-            localização da sua empresa e obtenham rotas de navegação para chegar
-            lá.
+            <p>
+              Integração com Google Maps: isso permite que os usuários vejam a
+              localização da sua empresa e obtenham rotas de navegação para
+              chegar lá.
+            </p>
           </li>
           <li>
-            Integração com redes sociais: Isso permite que os usuários acessem
-            suas contas de redes sociais diretamente do seu site, aumentando a
-            interação e engajamento.
+            <p>
+              Integração com redes sociais: Isso permite que os usuários acessem
+              suas contas de redes sociais diretamente do seu site, aumentando a
+              interação e engajamento.
+            </p>
           </li>
           <li>
-            Gerenciamento de estoque: Isso permite que você acompanhe o estoque
-            de seus produtos, gerencie seus pedidos e mantenha o controle do seu
-            inventário.
+            <p>
+              Gerenciamento de estoque: Isso permite que você acompanhe o
+              estoque de seus produtos, gerencie seus pedidos e mantenha o
+              controle do seu inventário.
+            </p>
           </li>
           <li>
-            SEO otimizado: Isso ajuda a garantir que seu site seja facilmente
-            encontrado nos mecanismos de busca, o que pode aumentar o tráfego e
-            as conversões.
+            <p>
+              SEO otimizado: Isso ajuda a garantir que seu site seja facilmente
+              encontrado nos mecanismos de busca, o que pode aumentar o tráfego
+              e as conversões.
+            </p>
           </li>
         </ul>
         <p>
@@ -151,13 +160,11 @@ const Sites: NextPage = () => {
       <Clouds position="top" />
       <Banner button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}>
         <Title _as="h3" scheme="secondary">
-          Imagine ter um site incrível que representa perfeitamente sua empresa
-          e ajuda a atrair novos clientes. Isso é possível com a IGS Design.
-          Oferecemos soluções personalizadas, equipe altamente qualificada,
-          atendimento exclusivo e recursos avançados para garantir que seu site
-          seja acessível e funcione perfeitamente em qualquer dispositivo. Não
-          perca mais tempo, entre em contato conosco hoje e deixe que criemos
-          juntos o site dos seus sonhos.
+          Transforme sua presença online em um negócio de sucesso com a IGS
+          Design! Nós oferecemos soluções personalizadas, equipe altamente
+          qualificada, atendimento exclusivo e recursos avançados para criar o
+          site dos seus sonhos. Não perca mais tempo, entre em contato conosco
+          agora e dê o primeiro passo para o sucesso do seu negócio na internet!
         </Title>
       </Banner>
     </>

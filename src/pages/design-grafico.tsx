@@ -18,21 +18,22 @@ const DesignGrafico: NextPage = () => {
       >
         <>
           <p>
-            A área de Design Gráfico da IGS é responsável pela criação de toda a
-            imagem vinculada á cartões de visita, folders, papel timbrado,
-            crachás, banners, convites e identidade visual em si, completando e
-            dando ainda mais personalidade para você, sua empresa ou
-            instituição.
+            A IGS Design oferece serviços de desenvolvimento gráfico de alto
+            impacto para ajudar a impulsionar a imagem da sua empresa. Nós
+            criamos materiais gráficos como cartões de visita, folders, papel
+            timbrado, crachás, banners, convites e muito mais, com design
+            exclusivo e personalizado para cada cliente.
           </p>
           <p>
-            Nos dias atuais é preciso mostrar ao público alvo que por trás da
-            qualidade de sua empresa existe também uma família que atende por
-            determinado nome e se apresenta de determinada forma.
+            Todos os nossos materiais gráficos são desenvolvidos com alta
+            qualidade e atenção aos detalhes, para garantir que sua empresa
+            tenha uma imagem profissional e coerente.
           </p>
           <p>
-            Um projeto bem feito para criação da sua identidade visual atrairá
-            ainda mais seus clientes em potencial, pois a sua marca se
-            comunicará com o seu público.
+            Além disso, a IGS Design oferece a personalização de todos os
+            materiais gráficos, desde a escolha de cores, fonte e imagens até o
+            posicionamento dos elementos, para que possamos criar um material
+            gráfico que reflita exatamente a sua empresa e sua marca.
           </p>
         </>
       </BoxInformation>
@@ -43,18 +44,35 @@ const DesignGrafico: NextPage = () => {
         scheme="secondary"
       >
         <p>
-          Investir na criação da sua identidade visual não dará somente um
-          símbolo para a sua empresa e sim definirá uma marca própria;
-          proporcionando respeito e uma personalidade única.
+          O design é a chave para o sucesso de qualquer empresa. É ele que vai
+          atrair e manter os clientes, transmitir a sua mensagem e ajudar a
+          construir uma imagem forte e coerente.
+        </p>
+        <p>
+          A IGS Design oferece todos os tipos de design, desde desenvolvimento
+          de sites até materiais gráficos, para garantir que sua empresa tenha
+          tudo o que precisa para se destacar. Nós trabalhamos de perto com
+          nossos clientes para entender suas necessidades e objetivos e criar
+          soluções personalizadas que atendam a eles.
+        </p>
+        <p>
+          Com a IGS Design, você tem acesso a equipe altamente qualificada,
+          atendimento exclusivo e recursos avançados para garantir que seu
+          negócio tenha o design que precisa para alcançar o sucesso. Entre em
+          contato conosco hoje para discutir como podemos ajudá-lo a alcançar
+          seus objetivos.
         </p>
       </BoxInformation>
       <Banner
         button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}
         scheme="secondary"
       >
-        <Title _as="h2">
-          Tem alguma dúvida do que fazer e como criar a melhor identidade visual
-          para sua empresa?
+        <Title _as="h3">
+          Não deixe a sua empresa passar despercebida! Temos o design certo para
+          o seu negócio. Nossa equipe altamente qualificada e experiente irá
+          criar soluções personalizadas e impactantes para garantir que sua
+          empresa se destaque. Entre em contato conosco agora e vamos juntos
+          impulsionar a imagem da sua empresa!
         </Title>
       </Banner>
     </>
