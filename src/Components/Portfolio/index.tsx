@@ -79,9 +79,8 @@ export const Portfolio = () => {
       <Container>
         <div className={styles.content}>
           <Title scheme="secondary">Nosso portfólio</Title>
-          <Fade appear>
-            <Gallery items={items} />
-          </Fade>
+
+          <Gallery items={items} />
 
           <Fade appear>
             <OurSites items={sites} />

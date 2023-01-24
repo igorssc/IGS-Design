@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 import { createRef, useEffect, useState } from "react";
+import Fade from "react-reveal/Fade";
 import styles from "./styles.module.scss";
 
 interface GalleryProps {
@@ -51,23 +52,24 @@ export const Gallery = ({ items }: GalleryProps) => {
     <>
       <div id="gallery" className={styles.gallery} ref={ref}>
         {items.map((item, index) => (
-          <a
-            href={item.original.src}
-            data-pswp-width={1080}
-            data-pswp-height={864}
-            key={"gallery" + "-" + index}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.item}
-            style={{ height: dimensionItem.height }}
-          >
-            <Image
-              src={item.thumbnail.src}
-              alt="gallery item"
-              loading="lazy"
-              fill
-            />
-          </a>
+          <Fade appear cascade key={"gallery" + "-" + index}>
+            <a
+              href={item.original.src}
+              data-pswp-width={1080}
+              data-pswp-height={864}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.item}
+              style={{ height: dimensionItem.height }}
+            >
+              <Image
+                src={item.thumbnail.src}
+                alt="gallery item"
+                loading="lazy"
+                fill
+              />
+            </a>
+          </Fade>
         ))}
       </div>
     </>
