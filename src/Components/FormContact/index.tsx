@@ -81,13 +81,18 @@ export const FormContact = () => {
     handleOpenBackdrop();
 
     try {
-      const response = await fetch("/api/email", {
+      const response = await fetch("/api/email/host", {
         method: "POST",
         body: JSON.stringify(body),
       });
       const data = await response.json();
 
       if (response.status === 200 && data.accepted) {
+        await fetch("/api/email/client", {
+          method: "POST",
+          body: JSON.stringify(body),
+        });
+
         handleClickSnackbarVariant("Mensagem enviada com sucesso!", "success");
         setNameValue("");
         setEmailValue("");
