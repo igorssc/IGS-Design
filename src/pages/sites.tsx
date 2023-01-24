@@ -8,6 +8,7 @@ import { Clouds } from "@/Components/Clouds";
 import { Title } from "@/Components/Title";
 import { NextPage } from "next";
 import Head from "next/head";
+import Fade from "react-reveal/Fade";
 
 const Sites: NextPage = () => {
   return (
@@ -162,13 +163,16 @@ const Sites: NextPage = () => {
         button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}
         style={{ paddingTop: 40 }}
       >
-        <Title _as="h3" scheme="secondary">
-          Transforme sua presença online em um negócio de sucesso com a IGS
-          Design! Nós oferecemos soluções personalizadas, equipe altamente
-          qualificada, atendimento exclusivo e recursos avançados para criar o
-          site dos seus sonhos. Não perca mais tempo, entre em contato conosco
-          agora e dê o primeiro passo para o sucesso do seu negócio na internet!
-        </Title>
+        <Fade bottom>
+          <Title _as="h3" scheme="secondary">
+            Transforme sua presença online em um negócio de sucesso com a IGS
+            Design! Nós oferecemos soluções personalizadas, equipe altamente
+            qualificada, atendimento exclusivo e recursos avançados para criar o
+            site dos seus sonhos. Não perca mais tempo, entre em contato conosco
+            agora e dê o primeiro passo para o sucesso do seu negócio na
+            internet!
+          </Title>
+        </Fade>
       </Banner>
     </>
   );

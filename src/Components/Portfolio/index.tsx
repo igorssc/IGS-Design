@@ -18,6 +18,7 @@ import portfolio3ImgThumb from "@/assets/portfolio/panfleto-master-vans-thumb.we
 import portfolio3Img from "@/assets/portfolio/panfleto-master-vans.webp";
 import portfolio8ImgThumb from "@/assets/portfolio/panfleto-promocao-de-natal-opticas-imperador-thumb.webp";
 import portfolio8Img from "@/assets/portfolio/panfleto-promocao-de-natal-opticas-imperador.webp";
+import Fade from "react-reveal/Fade";
 import { Container } from "../Container";
 import { Gallery } from "../Gallery";
 import { OurSites } from "../OurSites";
@@ -78,9 +79,13 @@ export const Portfolio = () => {
       <Container>
         <div className={styles.content}>
           <Title scheme="secondary">Nosso portfólio</Title>
-          <Gallery items={items} />
+          <Fade appear>
+            <Gallery items={items} />
+          </Fade>
 
-          <OurSites items={sites} />
+          <Fade appear>
+            <OurSites items={sites} />
+          </Fade>
         </div>
       </Container>
     </>

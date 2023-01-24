@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Globe, PaintBrush } from "phosphor-react";
+import Fade from "react-reveal/Fade";
 import { Button } from "../Button";
 import { Clouds } from "../Clouds";
 import { Container } from "../Container";
@@ -35,16 +36,18 @@ export const OurServices = () => {
               <div>
                 {services.map(({ title, _icon, description, link }, index) => (
                   <div key={index}>
-                    <div className={styles.icon}>
-                      <_icon size={40} />
-                    </div>
-                    <Title _as="h2" scheme="secondary">
-                      {title}
-                    </Title>
-                    <p>{description}</p>
-                    <Link href={link} style={{ width: "100%" }}>
-                      <Button>Saiba mais</Button>
-                    </Link>
+                    <Fade left={index === 0} right={index > 0}>
+                      <div className={styles.icon}>
+                        <_icon size={40} />
+                      </div>
+                      <Title _as="h2" scheme="secondary">
+                        {title}
+                      </Title>
+                      <p>{description}</p>
+                      <Link href={link} style={{ width: "100%" }}>
+                        <Button>Saiba mais</Button>
+                      </Link>
+                    </Fade>
                   </div>
                 ))}
               </div>

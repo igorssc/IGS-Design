@@ -5,6 +5,7 @@ import { BoxInformation } from "@/Components/BoxInformation";
 import { Title } from "@/Components/Title";
 import { NextPage } from "next";
 import Head from "next/head";
+import Fade from "react-reveal/Fade";
 
 const DesignGrafico: NextPage = () => {
   return (
@@ -67,13 +68,15 @@ const DesignGrafico: NextPage = () => {
         button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}
         scheme="secondary"
       >
-        <Title _as="h3">
-          Não deixe a sua empresa passar despercebida! Temos o design certo para
-          o seu negócio. Nossa equipe altamente qualificada e experiente irá
-          criar soluções personalizadas e impactantes para garantir que sua
-          empresa se destaque. Entre em contato conosco agora e vamos juntos
-          impulsionar a imagem da sua empresa!
-        </Title>
+        <Fade bottom>
+          <Title _as="h3">
+            Não deixe a sua empresa passar despercebida! Temos o design certo
+            para o seu negócio. Nossa equipe altamente qualificada e experiente
+            irá criar soluções personalizadas e impactantes para garantir que
+            sua empresa se destaque. Entre em contato conosco agora e vamos
+            juntos impulsionar a imagem da sua empresa!
+          </Title>
+        </Fade>
       </Banner>
     </>
   );

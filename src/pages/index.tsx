@@ -9,6 +9,7 @@ import { Title } from "@/Components/Title";
 import styles from "@/styles/Home.module.scss";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Fade from "react-reveal/Fade";
 
 const Home: NextPage = () => {
   return (
@@ -21,7 +22,9 @@ const Home: NextPage = () => {
       <BackgroundSky>
         <div className={styles.fillSky}>
           <Portfolio />
-          <OurClients />
+          <Fade appear>
+            <OurClients />
+          </Fade>
         </div>
       </BackgroundSky>
       <Clouds />
@@ -29,12 +32,14 @@ const Home: NextPage = () => {
         button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}
         style={{ paddingTop: 40 }}
       >
-        <Title _as="h3" scheme="secondary">
-          Não perca mais tempo! Entre em contato conosco agora e vamos juntos
-          alcançar seus objetivos e destacar seu negócio. Clique no botão abaixo
-          para acessar nossa página de contato e dê o primeiro passo para o
-          sucesso!
-        </Title>
+        <Fade bottom>
+          <Title _as="h3" scheme="secondary">
+            Não perca mais tempo! Entre em contato conosco agora e vamos juntos
+            alcançar seus objetivos e destacar seu negócio. Clique no botão
+            abaixo para acessar nossa página de contato e dê o primeiro passo
+            para o sucesso!
+          </Title>
+        </Fade>
       </Banner>
     </>
   );

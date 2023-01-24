@@ -4,6 +4,7 @@ import {
   ThumbsUp,
   Wrench,
 } from "phosphor-react";
+import LightSpeed from "react-reveal/LightSpeed";
 import { Container } from "../Container";
 import { Title } from "../Title";
 import styles from "./styles.module.scss";
@@ -39,11 +40,13 @@ export const AdvantagesWebsite = () => {
           <Title _as="h2">Vantagens em construir seu site com a IGS</Title>
           <div className={styles.content}>
             {advantages.map(([_icon, title, description], index) => (
-              <div key={index}>
-                <_icon size={40} />
-                <Title _as="h3">{title as string}</Title>
-                <p>{description as string}</p>
-              </div>
+              <LightSpeed left={index < 2} right={index >= 2} key={index}>
+                <div>
+                  <_icon size={40} />
+                  <Title _as="h3">{title as string}</Title>
+                  <p>{description as string}</p>
+                </div>
+              </LightSpeed>
             ))}
           </div>
         </Container>
