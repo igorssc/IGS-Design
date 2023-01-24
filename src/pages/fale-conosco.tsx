@@ -19,8 +19,11 @@ const FaleConosco: NextPage = () => {
           { href: "/design-grafico", text: "DESIGN GRÁFICO" },
         ]}
       >
-        <Title _as="h2" scheme="secondary">
-          Já conhece os serviços da IGS?
+        <Title _as="h3" scheme="secondary" style={{ paddingTop: 40 }}>
+          Não perca mais tempo! Descubra como podemos ajudar sua empresa a
+          alcançar o sucesso e destacar-se no mercado. Clique abaixo para
+          conhecer nossos serviços e dê o primeiro passo para o sucesso de sua
+          empresa.
         </Title>
       </Banner>
     </>

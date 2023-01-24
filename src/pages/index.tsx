@@ -25,11 +25,15 @@ const Home: NextPage = () => {
         </div>
       </BackgroundSky>
       <Clouds />
-      <Banner button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}>
+      <Banner
+        button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}
+        style={{ paddingTop: 40 }}
+      >
         <Title _as="h3" scheme="secondary">
           Não perca mais tempo! Entre em contato conosco agora e vamos juntos
-          alcançar seus objetivos e destacar seu negócio. Clique aqui para
-          acessar nossa página de contato e dê o primeiro passo para o sucesso!
+          alcançar seus objetivos e destacar seu negócio. Clique no botão abaixo
+          para acessar nossa página de contato e dê o primeiro passo para o
+          sucesso!
         </Title>
       </Banner>
     </>

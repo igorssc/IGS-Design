@@ -158,7 +158,10 @@ const Sites: NextPage = () => {
         </p>
       </BoxInformation>
       <Clouds position="top" />
-      <Banner button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}>
+      <Banner
+        button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}
+        style={{ paddingTop: 40 }}
+      >
         <Title _as="h3" scheme="secondary">
           Transforme sua presença online em um negócio de sucesso com a IGS
           Design! Nós oferecemos soluções personalizadas, equipe altamente

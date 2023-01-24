@@ -4,7 +4,7 @@
 }
 
 .button {
-  padding: 20px 60px;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -16,7 +16,6 @@
   z-index: 50;
 
   @media (min-width: 640px) {
-    padding: 20px 0;
     width: 300px;
   }
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import { Button } from "../Button";
 import { Container } from "../Container";
 import styles from "./styles.module.scss";
@@ -8,7 +8,7 @@ type ButtonProps = {
   href: string;
   text: string;
 };
-interface BannerProps {
+interface BannerProps extends HTMLAttributes<HTMLDivElement> {
   button?: [ButtonProps] | [ButtonProps, ButtonProps];
   children: ReactNode;
   scheme?: "primary" | "secondary";
@@ -18,12 +18,13 @@ export const Banner = ({
   children,
   button,
   scheme = "primary",
+  ...props
 }: BannerProps) => {
   return (
     <>
       <div className={`${styles.container} ${styles[scheme]}`}>
         <Container>
-          <div className={styles.content}>
+          <div className={styles.content} {...props}>
             {children}
             <div className={styles.buttons}>
               {button?.map(({ href, text }) => (

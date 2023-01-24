@@ -12,14 +12,14 @@ export const OurServices = () => {
       title: "Criação de sites",
       _icon: Globe,
       description:
-        "Criação de sites exclusivos, dinâmicos, modernos. Aumente as possibilidades de negócio com um site bonito, bem apresentável que convença seus clientes que a sua empresa é a melhor opção para eles.",
+        "A IGS Design cria sites personalizados e inovadores para expandir o alcance e sucesso dos negócios. Oferecemos soluções de última geração, incluindo lojas virtuais e integrações sociais. Nós acreditamos no sucesso de nossos clientes como sendo o nosso sucesso. Deixe a IGS Design ajudá-lo a destacar seu negócio.",
       link: "/sites",
     },
     {
       title: "Criação gráfica",
       _icon: PaintBrush,
       description:
-        "Construção de marcas, identidade visual, redesign e modernização de logotipos, logomarcas e símbolos. Design de folders, folhetos e flyers, criação de cartões de visita, convites, timbrados, envelopes, banners, etc.",
+        "A IGS Design oferece soluções completas de design gráfico, desde logotipos até cartões de visita, panfletos, banners, flyers e convites, entre outros. Nós entendemos a importância de se destacar no mercado e por isso criamos designs personalizados e de alta qualidade para atender às necessidades de cada cliente.",
       link: "/design-grafico",
     },
   ];

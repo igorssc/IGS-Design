@@ -1,10 +1,10 @@
 import Image, { StaticImageData } from "next/image";
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import { Container } from "../Container";
 import { Title } from "../Title";
 import styles from "./styles.module.scss";
 
-interface BoxInformationProps {
+interface BoxInformationProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   children: ReactNode;
   _image?: StaticImageData | any;
@@ -18,10 +18,11 @@ export const BoxInformation = ({
   _image,
   invert,
   scheme = "primary",
+  ...props
 }: BoxInformationProps) => {
   return (
     <>
-      <div className={`${styles.container} ${styles[scheme]}`}>
+      <div className={`${styles.container} ${styles[scheme]}`} {...props}>
         <Container>
           <Title _as="h2" scheme={scheme}>
             {title}

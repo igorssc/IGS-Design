@@ -13,9 +13,15 @@ const SobreNos: NextPage = () => {
       </Head>
       <About />
       <Clouds position="top" />
-      <Banner button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}>
-        <Title _as="h2" scheme="secondary">
-          Não perca tempo e entre em contato hoje mesmo!
+      <Banner
+        button={[{ href: "/fale-conosco", text: "FALE CONOSCO" }]}
+        style={{ paddingTop: 40 }}
+      >
+        <Title _as="h3" scheme="secondary">
+          Não perca mais tempo! Entre em contato conosco agora e vamos juntos
+          alcançar seus objetivos e destacar seu negócio. Nós temos o design
+          certo para o seu negócio. Clique no botão abaixo para nos contatar e
+          dê o primeiro passo para o sucesso!
         </Title>
       </Banner>
     </>
