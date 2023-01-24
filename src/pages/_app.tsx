@@ -1,5 +1,6 @@
 import { AdditionalInformation } from "@/Components/AdditionalInformation";
 import { ButtonScrollTop } from "@/Components/ButtonScrollTop";
+import { ButtonWhatsApp } from "@/Components/ButtonWhatsApp";
 import { Footer } from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import { BackdropProvider } from "@/hooks/useBackdrop";
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Navbar />
         <Component {...pageProps} />
         <AdditionalInformation />
+        <ButtonWhatsApp />
         <ButtonScrollTop />
         <Footer />
       </BackdropProvider>
