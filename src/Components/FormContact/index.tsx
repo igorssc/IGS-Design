@@ -1,9 +1,11 @@
 import { useSnackbar } from "notistack";
 import { useState } from "react";
 import { useBackdrop } from "../../hooks/useBackdrop";
-import { maskPhone } from "../../utils/mask";
 import { Button } from "../Button";
 import { Container } from "../Container";
+import { Input } from "../Input";
+import { Select } from "../Select";
+import { TextArea } from "../TextArea";
 import { Title } from "../Title";
 import styles from "./styles.module.scss";
 
@@ -11,7 +13,7 @@ export const FormContact = () => {
   const [nameValue, setNameValue] = useState<string>("");
   const [emailValue, setEmailValue] = useState<string>("");
   const [phoneValue, setPhoneValue] = useState<string>("");
-  const [subjectValue, setSubjectValue] = useState<string>("");
+  const [subjectValue, setSubjectValue] = useState<string>("Dúvidas");
   const [messageValue, setMessageValue] = useState<string>("");
 
   const { handleOpen: handleOpenBackdrop, handleClose: handleCloseBackdrop } =
@@ -114,55 +116,41 @@ export const FormContact = () => {
             }}
           >
             <div>
-              <label htmlFor="name">Nome completo:</label>
-              <input
-                type="text"
-                id="name"
+              <Input
+                title="Nome completo"
                 value={nameValue}
-                onChange={(e) => setNameValue(e.target.value)}
+                setValue={setNameValue}
               />
             </div>
             <div>
-              <label htmlFor="email">E-mail:</label>
-              <input
-                type="text"
-                id="email"
+              <Input
+                title="E-mail"
                 value={emailValue}
-                onChange={(e) => setEmailValue(e.target.value)}
+                setValue={setEmailValue}
               />
             </div>
             <div>
-              <label htmlFor="phone">Telefone:</label>
-              <input
-                type="text"
-                id="phone"
+              <Input
+                title="E-mail"
                 value={phoneValue}
-                onChange={(e) => setPhoneValue(maskPhone(e.target.value))}
+                setValue={setPhoneValue}
+                type="phone"
               />
             </div>
             <div>
-              <label htmlFor="subject">Assunto:</label>
-              <select
-                id="subject"
-                value={subjectValue}
-                onChange={(e) => setSubjectValue(e.target.value)}
-              >
-                <option value="" hidden>
-                  Assunto *
-                </option>
-                <option value="Dúvidas">Dúvidas</option>
-                <option value="Orçamentos">Orçamentos</option>
-                <option value="Reclamações">Reclamações</option>
-                <option value="Sugestões">Sugestões</option>
-              </select>
+              <Select
+                title="Assunto"
+                data={["Dúvidas", "Orçamentos", "Reclamações", "Sugestões"]}
+                defaultValue={subjectValue}
+                setValue={setSubjectValue}
+              />
             </div>
             <div>
-              <label htmlFor="message">Mensagem:</label>
-              <textarea
-                id="message"
+              <TextArea
+                title="Mensagem"
                 value={messageValue}
-                onChange={(e) => setMessageValue(e.target.value)}
-              ></textarea>
+                setValue={setMessageValue}
+              />
             </div>
             <div className={styles.button}>
               <Button type="submit">Enviar</Button>

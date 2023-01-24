@@ -1,0 +1,14 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  background: #d1ebf8;
+  border: none;
+  padding: 12px 40px 12px 12px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 50;
+}

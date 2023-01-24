@@ -44,32 +44,6 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-
-      label {
-        position: relative;
-        z-index: 50;
-      }
-
-      input,
-      textarea,
-      select {
-        background: #d1ebf8;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        position: relative;
-        z-index: 50;
-      }
-
-      textarea {
-        height: 200px;
-      }
-
-      @media (min-width: 1024px) {
-        textarea {
-          height: 100%;
-        }
-      }
     }
 
     .button {
