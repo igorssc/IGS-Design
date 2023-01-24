@@ -45,7 +45,7 @@ export const OurServices = () => {
                       </Title>
                       <p>{description}</p>
                       <Link href={link} style={{ width: "100%" }}>
-                        <Button>Saiba mais</Button>
+                        <Button>SAIBA MAIS</Button>
                       </Link>
                     </div>
                   </Fade>
