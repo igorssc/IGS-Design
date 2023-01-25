@@ -14,6 +14,7 @@ const NotFound: NextPage = () => {
   return (
     <>
       <div className={styles.container}>
+        <div className={styles.backdrop}></div>
         <div className={styles.stars}>
           <Container
             style={{
