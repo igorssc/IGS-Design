@@ -7,12 +7,16 @@ import { Button } from "@/Components/Button";
 import { Container } from "@/Components/Container";
 import styles from "@/styles/404.module.scss";
 import { NextPage } from "next";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 const NotFound: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>IGS Design - 404</title>
+      </Head>
       <div className={styles.container}>
         <div className={styles.backdrop}></div>
         <div className={styles.stars}>
