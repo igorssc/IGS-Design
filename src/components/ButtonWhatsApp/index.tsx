@@ -10,7 +10,7 @@ export const ButtonWhatsApp = () => {
         target="_blank"
         className={styles.content}
       >
-        <WhatsappLogo size={30} />
+        <WhatsappLogo size={30} weight="light" />
       </Link>
     </>
   );
