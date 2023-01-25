@@ -88,17 +88,19 @@ export const FormContact = () => {
       const data = await response.json();
 
       if (response.status === 200 && data.accepted) {
-        await fetch("/api/email/client", {
-          method: "POST",
-          body: JSON.stringify(body),
-        });
+        const bodyTemporary = JSON.stringify(body);
 
         handleClickSnackbarVariant("Mensagem enviada com sucesso!", "success");
         setNameValue("");
         setEmailValue("");
         setPhoneValue("");
-        setSubjectValue("");
+        setSubjectValue("Dúvidas");
         setMessageValue("");
+
+        await fetch("/api/email/client", {
+          method: "POST",
+          body: bodyTemporary,
+        });
       } else {
         throw new Error();
       }
