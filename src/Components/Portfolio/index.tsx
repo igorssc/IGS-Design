@@ -83,6 +83,7 @@ export const Portfolio = () => {
           <Gallery items={items} />
 
           <Fade appear>
+            <Title scheme="secondary">Sites desenvolvidos</Title>
             <OurSites items={sites} />
           </Fade>
         </div>

@@ -15,9 +15,6 @@ interface OurSitesProps {
 export const OurSites = ({ items }: OurSitesProps) => {
   return (
     <>
-      <Title scheme="secondary" _as="h2">
-        Sites desenvolvidos
-      </Title>
       <div className={styles.content}>
         {items.map((item, index) => (
           <Fade appear cascade key={index}>

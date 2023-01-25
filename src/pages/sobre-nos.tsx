@@ -1,7 +1,7 @@
-import { About } from "@/Components/About";
-import { Banner } from "@/Components/Banner";
-import { Clouds } from "@/Components/Clouds";
-import { Title } from "@/Components/Title";
+import { About } from "@/components/About";
+import { Banner } from "@/components/Banner";
+import { Clouds } from "@/components/Clouds";
+import { Title } from "@/components/Title";
 import { NextPage } from "next";
 import Head from "next/head";
 import Fade from "react-reveal/Fade";

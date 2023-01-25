@@ -1,8 +1,8 @@
-import { AdditionalInformation } from "@/Components/AdditionalInformation";
-import { ButtonScrollTop } from "@/Components/ButtonScrollTop";
-import { ButtonWhatsApp } from "@/Components/ButtonWhatsApp";
-import { Footer } from "@/Components/Footer";
-import Navbar from "@/Components/Navbar";
+import { AdditionalInformation } from "@/components/AdditionalInformation";
+import { ButtonScrollTop } from "@/components/ButtonScrollTop";
+import { ButtonWhatsApp } from "@/components/ButtonWhatsApp";
+import { Footer } from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import { BackdropProvider } from "@/hooks/useBackdrop";
 import "@/styles/globals.scss";
 import PageNProgress from "next-styled-nprogress";

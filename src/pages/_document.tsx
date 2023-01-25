@@ -1,4 +1,4 @@
-import { Analytics } from "@/Components/Analytics";
+import { Analytics } from "@/components/Analytics";
 import Document, {
   DocumentContext,
   DocumentInitialProps,

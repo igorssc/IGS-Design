@@ -1,11 +1,11 @@
 import developersCreatingExtraFeaturesImg from "@/assets/developers-creating-extra-features.svg";
 import DevelopersCreatingWebsiteImg from "@/assets/developers-creating-website.svg";
 import websiteCreationProcessImg from "@/assets/website-creation-process.svg";
-import { AdvantagesWebsite } from "@/Components/AdvantagesWebsite";
-import { Banner } from "@/Components/Banner";
-import { BoxInformation } from "@/Components/BoxInformation";
-import { Clouds } from "@/Components/Clouds";
-import { Title } from "@/Components/Title";
+import { AdvantagesWebsite } from "@/components/AdvantagesWebsite";
+import { Banner } from "@/components/Banner";
+import { BoxInformation } from "@/components/BoxInformation";
+import { Clouds } from "@/components/Clouds";
+import { Title } from "@/components/Title";
 import { NextPage } from "next";
 import Head from "next/head";
 import Fade from "react-reveal/Fade";

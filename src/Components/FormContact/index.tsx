@@ -96,7 +96,7 @@ export const FormContact = () => {
         setPhoneValue("");
         setSubjectValue("Dúvidas");
         setMessageValue("");
-	handleCloseBackdrop()
+        handleCloseBackdrop();
 
         await fetch("/api/email/client", {
           method: "POST",
@@ -107,9 +107,8 @@ export const FormContact = () => {
       }
     } catch {
       handleClickSnackbarVariant("Erro ao enviar a mensagem", "error");
-	handleCloseBackdrop()
+      handleCloseBackdrop();
     } finally {
-      
     }
   };
 
