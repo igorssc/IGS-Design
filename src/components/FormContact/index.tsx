@@ -14,7 +14,7 @@ export const FormContact = () => {
   const [nameValue, setNameValue] = useState<string>("");
   const [emailValue, setEmailValue] = useState<string>("");
   const [phoneValue, setPhoneValue] = useState<string>("");
-  const [subjectValue, setSubjectValue] = useState<string>("Dúvidas");
+  const [subjectValue, setSubjectValue] = useState<string>("");
   const [messageValue, setMessageValue] = useState<string>("");
 
   const { handleOpen: handleOpenBackdrop, handleClose: handleCloseBackdrop } =
@@ -41,7 +41,7 @@ export const FormContact = () => {
         "Insira seu nome completo, por favor",
         "warning"
       );
-      document.getElementById("name")?.focus();
+      document.getElementById("form-name")?.focus();
       return;
     }
     if (
@@ -53,7 +53,7 @@ export const FormContact = () => {
         "Insira um e-mail válido, por favor",
         "warning"
       );
-      document.getElementById("email")?.focus();
+      document.getElementById("form-email")?.focus();
       return;
     }
     if (body.phone.length < 14) {
@@ -61,7 +61,12 @@ export const FormContact = () => {
         "Insira seu telefone completo, com DDD, por favor",
         "warning"
       );
-      document.getElementById("phone")?.focus();
+      document.getElementById("form-phone")?.focus();
+      return;
+    }
+    if (!body.subject) {
+      handleClickSnackbarVariant("Selecione um assunto, por favor", "warning");
+      document.getElementById("form-subject")?.focus();
       return;
     }
     if (body.message.length < 10) {
@@ -69,12 +74,7 @@ export const FormContact = () => {
         "Sua mensagem deve conter ao menos 10 caracteres",
         "warning"
       );
-      document.getElementById("message")?.focus();
-      return;
-    }
-    if (!body.subject) {
-      handleClickSnackbarVariant("Selecione um assunto, por favor", "warning");
-      document.getElementById("subject")?.focus();
+      document.getElementById("form-message")?.focus();
       return;
     }
 
@@ -94,7 +94,7 @@ export const FormContact = () => {
         setNameValue("");
         setEmailValue("");
         setPhoneValue("");
-        setSubjectValue("Dúvidas");
+        setSubjectValue("");
         setMessageValue("");
         handleCloseBackdrop();
 
@@ -133,6 +133,7 @@ export const FormContact = () => {
                 title="Nome completo"
                 value={nameValue}
                 setValue={setNameValue}
+                id="form-name"
               />
             </div>
             <div>
@@ -140,6 +141,7 @@ export const FormContact = () => {
                 title="E-mail"
                 value={emailValue}
                 setValue={setEmailValue}
+                id="form-email"
               />
             </div>
             <div>
@@ -147,6 +149,7 @@ export const FormContact = () => {
                 title="Telefone"
                 value={phoneValue}
                 setValue={setPhoneValue}
+                id="form-phone"
               />
             </div>
             <div>
@@ -155,6 +158,7 @@ export const FormContact = () => {
                 data={["Dúvidas", "Orçamentos", "Reclamações", "Sugestões"]}
                 defaultValue={subjectValue}
                 setValue={setSubjectValue}
+                id="form-subject"
               />
             </div>
             <div>
@@ -162,6 +166,7 @@ export const FormContact = () => {
                 title="Mensagem"
                 value={messageValue}
                 setValue={setMessageValue}
+                id="form-message"
               />
             </div>
             <div className={styles.button}>

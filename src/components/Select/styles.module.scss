@@ -19,13 +19,12 @@
   background: #d1ebf8;
   padding: 12px 40px 12px 12px;
   text-align: left;
-  outline: 0;
   border: 0;
+  outline-style: none;
 
-  :focus {
+  &:focus {
     outline-style: solid;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    outline-width: 2px;
   }
 
   :nth-child(1) {

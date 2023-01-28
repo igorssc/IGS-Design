@@ -15,7 +15,11 @@
   gap: 2rem;
   padding: 50px 0;
 
-  @media (min-width: 768px) {
+  .image {
+    margin: auto;
+  }
+
+  @media (min-width: 1024px) {
     &.containsImage {
       display: grid;
       grid-template-columns: 1fr 1fr;

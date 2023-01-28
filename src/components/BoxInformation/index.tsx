@@ -44,11 +44,12 @@ export const BoxInformation = ({
                       loading="lazy"
                       src={_image.src}
                       alt="Website image"
+                      className={styles.image}
                     />
                   </Fade>
                 ) : (
                   <Fade left={!invert} right={invert}>
-                    <_image />
+                    <_image className={styles.image} />
                   </Fade>
                 )}
               </>

@@ -8,6 +8,7 @@ interface SelectProps {
   data: string[];
   defaultValue: string;
   setValue: Dispatch<SetStateAction<string>>;
+  id?: string;
 }
 
 export const Select = ({
@@ -15,6 +16,7 @@ export const Select = ({
   title,
   defaultValue,
   setValue,
+  id = "",
 }: SelectProps) => {
   const [selected, setSelected] = useState(defaultValue);
 
@@ -29,8 +31,8 @@ export const Select = ({
       >
         <div className={styles.select}>
           <Listbox.Label className={styles.label}>{title}:</Listbox.Label>
-          <Listbox.Button className={styles.button}>
-            <span>{selected}</span>
+          <Listbox.Button className={styles.button} id={id}>
+            <span>{selected || "Selecione"}</span>
             <span>
               <CaretUp />
               <CaretDown style={{ marginTop: -4 }} />

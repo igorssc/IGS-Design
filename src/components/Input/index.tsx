@@ -1,7 +1,7 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, HTMLAttributes, SetStateAction } from "react";
 import styles from "./styles.module.scss";
 
-interface InputProps {
+interface InputProps extends HTMLAttributes<HTMLInputElement> {
   title: string;
   value: string;
   setValue: Dispatch<SetStateAction<string>>;
@@ -13,6 +13,7 @@ export const Input = ({
   value,
   setValue,
   type = "text",
+  ...props
 }: InputProps) => {
   return (
     <>
@@ -23,6 +24,7 @@ export const Input = ({
           type={type}
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          {...props}
         />
       </label>
     </>

@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
-import { createRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
 import styles from "./styles.module.scss";
 
@@ -13,7 +13,6 @@ interface GalleryProps {
 }
 
 export const Gallery = ({ items }: GalleryProps) => {
-  const ref = createRef<HTMLDivElement>();
   const [dimensionItem, setDimensionItem] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
@@ -50,7 +49,7 @@ export const Gallery = ({ items }: GalleryProps) => {
 
   return (
     <>
-      <div id="gallery" className={styles.gallery} ref={ref}>
+      <div id="gallery" className={styles.gallery}>
         {items.map((item, index) => (
           <Fade appear cascade key={"gallery" + "-" + index}>
             <a
