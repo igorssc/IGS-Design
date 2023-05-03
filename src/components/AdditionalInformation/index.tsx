@@ -11,7 +11,7 @@ export const AdditionalInformation = () => {
         <div className={styles.content}>
           <div>
             <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdesign.igs&tabs=timeline&width=340&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=909705613246103"
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Figs.design.oficial&tabs=timeline&width=340&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=909705613246103"
               width="340"
               height="331"
               style={{ border: "none", overflow: "hidden" }}
